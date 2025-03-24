@@ -56,12 +56,10 @@ const getPopularTracks = function (artistID) {
     .then((data) => {
       const popularTracksList = document.getElementById("popular-tracks-list");
 
-      // Aggiungiamo ogni brano all'elenco
       data.data.forEach((track) => {
         const listItem = document.createElement("li");
         listItem.classList.add("mb-3");
 
-        // Impostiamo il contenuto dell'elemento
         listItem.innerHTML = `
             <div class="d-flex align-items-center gap-3">
               <img
@@ -83,7 +81,6 @@ const getPopularTracks = function (artistID) {
             </div>
           `;
 
-        // Aggiungiamo l'elemento alla lista
         popularTracksList.appendChild(listItem);
       });
     })
