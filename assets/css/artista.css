@@ -1,3 +1,6 @@
 .userImg {
   width: 30px;
 }
+ol {
+  list-style-type: decimal;
+}

@@ -58,10 +58,11 @@ const getPopularTracks = function (artistID) {
 
       data.data.forEach((track) => {
         const listItem = document.createElement("li");
+
         listItem.classList.add("mb-3");
 
         listItem.innerHTML = `
-            <div class="d-flex align-items-center gap-3">
+            <div class="d-flex align-items-center gap-3 ">
               <img
                 src="${track.album.cover_small}"
                 alt="img brano"
@@ -72,8 +73,8 @@ const getPopularTracks = function (artistID) {
               <div class="flex-grow-1">
                 <h5 class="mb-1">${track.title}</h5>
                 <div class="d-flex justify-content-between">
-                  <p class="mb-0 text-muted">Ascolti: ${track.rank.toLocaleString()}</p>
-                  <p class="mb-0 text-muted">${formatDuration(
+                  <p class="mb-0 text-secondary">Ascolti: ${track.rank.toLocaleString()}</p>
+                  <p class="mb-0 text-secondary">${formatDuration(
                     track.duration
                   )}</p>
                 </div>
