@@ -1,6 +1,7 @@
 @import "scss/functions";
 @import "scss/variables";
 @import "scss/mixins";
+@import "circular.font.css";
 
 $spotifyGreen: #1db954;
 $spotifyBlack: #191414;
@@ -20,5 +21,10 @@ $new-theme-colors: (
 );
 
 $theme-colors: map-merge($theme-colors, $new-theme-colors);
+
+.circular {
+  font-family: "Circular", sans-serif;
+  font-weight: 500;
+}
 
 @import "scss/bootstrap";
