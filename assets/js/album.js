@@ -1,0 +1,50 @@
+// const apiLink = `https://striveschool-api.herokuapp.com/api/deezer/album/${ID}`
+const apiLinkTest = " https://striveschool-api.herokuapp.com/api/deezer/album/75621062"
+
+const songImport = function () {
+    
+
+    fetch(apiLinkTest,{
+        headers:{
+            "Content-Type": "application/json",
+            Authorization:
+            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2RkMWYxZDM4MzRiZjAwMTUwMDA2ZmMiLCJpYXQiOjE3NDI1NDQ2NjksImV4cCI6MTc0Mzc1NDI2OX0.Fe1metoCEo3L7Ffjh8C7qiDWYg7k-4Xjt2Cgh2sRa40",
+        }
+    }).then((response) =>{
+        if(response.ok){
+            console.log("tutto ok")
+            return response.json()
+        }else{
+            throw new Error ("qualquadra non cosa")
+        }
+    }).then((data) =>{
+        console.log("DATA:", data)
+        const appendElement = document.getElementById("import-container")
+        appendElement.innerHTML=` `
+        let i = 1
+        data.tracks.data.forEach(song => {
+            const rowElement = document.createElement("div")
+            rowElement.classList.add("row","mt-3")
+            const columnElement = document.createElement("div")
+            columnElement.classList.add("col","d-flex","align-items-center","gap-2","col-7")
+            columnElement.id = i
+            columnElement.innerHTML=`<div>${columnElement.id}</div>
+                <div>
+                  <h4>${song.title}</h4>
+                  <span>${song.artist.name}</span>
+                  `
+               const columnElementB = document.createElement("div")
+               columnElementB.classList.add("col","col-3")
+               columnElementB.innerHTML =`${song.rank}`
+               const columnElementC = document.createElement("div")
+               columnElementC.classList.add("col","col-2")
+               columnElementC.innerHTML =`${(song.duration / 60).toFixed(2)}`
+                  appendElement.append(columnElement, columnElementB ,columnElementC)
+               i++
+        });
+
+    }).catch((err) => {
+      console.log("ERROR:", err)
+    });
+}
+songImport()
