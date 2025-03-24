@@ -1,0 +1,24 @@
+@import "scss/functions";
+@import "scss/variables";
+@import "scss/mixins";
+
+$spotifyGreen: #1db954;
+$spotifyBlack: #191414;
+$white: #ffffff;
+$lightGrey: #b3b3b3;
+$darkGrey: #535353;
+$bgGrey: #121212;
+$bgSecondary: #212121;
+
+$new-theme-colors: (
+  "primary": $spotifyGreen,
+  "secondary": $spotifyBlack,
+  "success": $lightGrey,
+  "danger": $darkGrey,
+  "warning": $bgGrey,
+  "info": $bgSecondary,
+);
+
+$theme-colors: map-merge($theme-colors, $new-theme-colors);
+
+@import "scss/bootstrap";
