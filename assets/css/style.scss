@@ -1,0 +1,48 @@
+@import "scss/functions";
+@import "scss/variables";
+@import "scss/mixins";
+@import "circular.font.css";
+
+$spotifyGreen: #1db954;
+$spotifyBlack: #202020;
+$white: #ffffff;
+$lightGrey: #b3b3b3;
+$darkGrey: #424242;
+$bgGrey: #121212;
+$bgSecondary: #212121;
+
+$new-theme-colors: (
+  "primary": $spotifyGreen,
+  "secondary": $spotifyBlack,
+  "success": $lightGrey,
+  "danger": $darkGrey,
+  "warning": $bgGrey,
+  "info": $bgSecondary,
+);
+
+$theme-colors: map-merge($theme-colors, $new-theme-colors);
+
+.circular {
+  font-family: "Circular", sans-serif;
+  font-weight: 500;
+}
+
+$fs-7: 0.875rem;
+$fs-8: 0.75rem;
+$fs-9: 0.625rem;
+$fs-10: 0.5rem;
+
+.fs-7 {
+  font-size: $fs-7;
+}
+.fs-8 {
+  font-size: $fs-8;
+}
+.fs-9 {
+  font-size: $fs-9;
+}
+.fs-10 {
+  font-size: $fs-10;
+}
+
+@import "scss/bootstrap";
