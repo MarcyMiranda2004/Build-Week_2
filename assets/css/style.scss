@@ -27,4 +27,22 @@ $theme-colors: map-merge($theme-colors, $new-theme-colors);
   font-weight: 500;
 }
 
+$fs-7: 0.875rem;
+$fs-8: 0.75rem;
+$fs-9: 0.625rem;
+$fs-10: 0.5rem;
+
+.fs-7 {
+  font-size: $fs-7;
+}
+.fs-8 {
+  font-size: $fs-8;
+}
+.fs-9 {
+  font-size: $fs-9;
+}
+.fs-10 {
+  font-size: $fs-10;
+}
+
 @import "scss/bootstrap";
