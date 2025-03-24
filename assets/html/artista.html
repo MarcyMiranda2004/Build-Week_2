@@ -54,7 +54,7 @@
             <!-- User Dropdown Menu -->
             <div class="dropdown">
               <button
-                class="btn btn-secondary dropdown-toggle"
+                class="btn btn-dark dropdown-toggle text-light"
                 type="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -66,15 +66,26 @@
                 />
                 Marcello Miranda ...
               </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Account</a></li>
-                <li><a class="dropdown-item" href="#">Settings</a></li>
-                <li><a class="dropdown-item" href="#">Logout</a></li>
+              <ul class="dropdown-menu bg-dark">
+                <li>
+                  <a class="dropdown-item text-light bg-dark" href="#"
+                    >Account</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item text-light bg-dark" href="#"
+                    >Settings</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item text-light bg-dark" href="#"
+                    >Logout</a
+                  >
+                </li>
               </ul>
             </div>
           </div>
 
-          <!-- Canzone in primo piano -->
           <div class="d-flex flex-column align-items-start gap-3 p-4">
             <div class="artist-background"></div>
 
@@ -102,25 +113,22 @@
             <i class="bi bi-three-dots fs-3"></i>
           </div>
         </section>
-        <div class="container">
-          <div class="row d-flex flex-column">
-            <div
-              class="col col-md-6 col-lg-6 my-3 d-flex gap-2 align-items-center"
-            >
+        <div class="row">
+          <div class="col-12 col-md-6 my-3 order-2 order-md-1">
+            <h2 class="fw-bold d-flex align-items-center">Popolari</h2>
+            <ol class="list-unstyled" id="popular-tracks-list"></ol>
+          </div>
+
+          <div class="col-12 col-md-6 my-3 order-1 order-md-2">
+            <div class="d-flex gap-2 align-items-center">
               <img
-                src=""
+                src="..."
                 alt="artist img"
-                id="roundedArtist"
                 class="rounded rounded-circle"
+                id="roundedArtist"
               />
-              <h5>Brani che ti piacciono</h5>
-            </div>
-            <div class="row">
-              <h4>Popolari</h4>
-              <div class="col col-md-6 col-lg-6 my-3 d-flex g-2">
-                <ol class="list-unstyled" id="popular-tracks-list">
-                  <!-- Qui verranno inseriti dinamicamente i brani popolari -->
-                </ol>
+              <div class="ms-3">
+                <h5>Brani che ti piacciono</h5>
               </div>
             </div>
           </div>
