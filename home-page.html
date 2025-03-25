@@ -100,12 +100,18 @@
         </div>
 
         <!-- Canzone in primo piano -->
-        <div>
-          <img src="..." alt="song_cover" />
-          <div>
+        <div class="row bg-warning mx-4 py-3 d-flex">
+          <div class="col-2 d-flex justify-content-center align-items-center">
+            <img
+              src="./assets/img/main/image-1.jpg"
+              alt="song_cover"
+              class="img-fluid"
+            />
+          </div>
+          <div class="col-9 fw-normal position-relative flex-grow-1">
             <div class="songContainer">
               <p>ALBUM</p>
-              <h1>NOME ALBUM/CANZONE</h1>
+              <h1 class="fw-bold fs-11">NOME ALBUM/CANZONE</h1>
               <p>Nome Artista</p>
               <p>Ascolta il nuovo brano di {ARTISTA}</p>
             </div>
@@ -116,7 +122,11 @@
                 <i class="bi bi-three-dots"></i>
               </button>
             </div>
-            <button>NASCONDI ANNUNCI</button>
+            <button
+              class="btn btn-secodnary text-danger fw-bold position-absolute top-0 end-0 me-2"
+            >
+              NASCONDI ANNUNCI
+            </button>
           </div>
         </div>
 
@@ -335,7 +345,7 @@
           </section>
 
           <!-- User 3 -->
-          <sectio class="text-light">
+          <section>
             <img
               src="./assets/img/users/user-4.jpg"
               alt="user_img"

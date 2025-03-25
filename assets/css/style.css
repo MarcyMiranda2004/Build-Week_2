@@ -21,6 +21,10 @@
   font-size: 0.5rem;
 }
 
+.fs-11 {
+  font-size: 5rem;
+}
+
 .hover:hover {
   cursor: pointer;
   color: #ffffff;
