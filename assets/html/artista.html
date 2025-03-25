@@ -239,115 +239,67 @@
         </div>
       </main>
 
-      <!-- Side Bar DX -->
-      <aside class="col col-md-1 d-flex flex-column bg-black d-none d-lg-block">
-        <div class="d-flex justify-content-between">
-          <h5>Attività Amici</h5>
-          <div><i class="bi bi-person-add"></i> <i class="bi bi-x-lg"></i></div>
+      <!-- playbar -->
+      <div
+        class="w-100 fixed-bottom d-flex justify-content-between bg-secondary p-2 px-4 align-items-center border-top border-danger"
+      >
+        <!-- Brano in Corso -->
+        <div class="d-flex align-items-center text-white">
+          <img
+            src="..."
+            alt="song_cover"
+            class="rounded-3"
+            style="width: 50px; height: 50px; object-fit: cover"
+          />
+          <div class="ms-2">
+            <h6 class="mb-0 fs-7 fw-bold">Nome Brano</h6>
+            <p class="mb-0 fs-8">Nome Artista</p>
+          </div>
+          <i class="bi bi-heart ms-4 fs-5"></i>
         </div>
-        <div class="d-flex flex-column">
-          <!-- User 1 -->
-          <section>
-            <img
-              src="../img/users/user-2.jpg"
-              alt="user_img"
-              class="rounded rounded-circle userImg"
-            />
-            <h5>Angelo Zorzi</h5>
-            <p>In Camera &bull; Yumi Zouma</p>
-            <p><i class="bi bi-stop-circle"></i> EP III</p>
-            <p>4 ore</p>
-          </section>
 
-          <!-- User 2 -->
-          <section>
-            <img
-              src="../img/users/user-3.jpg"
-              alt="user_img"
-              class="rounded rounded-circle userImg"
-            />
-            <h5>Lucrezia Martinelli</h5>
-            <p>Aimed to Kill &bull; Jade Lemac</p>
-            <p><i class="bi bi-stop-circle"></i> Aimed to Kill</p>
-            <p>8 ore</p>
-          </section>
-
-          <!-- User 3 -->
-          <section>
-            <img
-              src="../img/users/user-4.jpg"
-              alt="user_img"
-              class="rounded rounded-circle userImg"
-            />
-            <h5>Marco Teodoro Mancuso</h5>
-            <p>New Kings &bull; Sleeping Wolf</p>
-            <p><i class="bi bi-music-note-beamed"></i> Twint Badass Mood</p>
-            <p>3 giorni</p>
-          </section>
-        </div>
-      </aside>
-      <footer>
-        <!-- playbar -->
-        <div
-          class="w-100 fixed-bottom d-flex justify-content-between bg-dark p-2 px-4 align-items-center border-top border-danger"
-        >
-          <!-- Brano in Corso -->
-          <div class="d-flex align-items-center text-white">
-            <img
-              src="..."
-              alt="song_cover"
-              class="rounded-3"
-              style="width: 50px; height: 50px; object-fit: cover"
-            />
-            <div class="ms-2">
-              <h6 class="mb-0 fs-7 fw-bold">Nome Brano</h6>
-              <p class="mb-0 fs-8">Nome Artista</p>
-            </div>
-            <i class="bi bi-heart ms-4 fs-5"></i>
+        <!-- Play Buttons -->
+        <div class="d-flex flex-column align-items-center flex-grow-1">
+          <div class="d-flex justify-content-center">
+            <button class="btn btn-link text-white fs-4">
+              <i class="bi bi-shuffle"></i>
+            </button>
+            <button class="btn btn-link text-white fs-4">
+              <i class="fas fa-step-backward"></i>
+            </button>
+            <button class="btn btn-link text-white fs-4">
+              <i class="fas fa-play"></i>
+            </button>
+            <button class="btn btn-link text-white fs-4">
+              <i class="fas fa-step-forward"></i>
+            </button>
+            <button class="btn btn-link text-white fs-4">
+              <i class="fas fa-retweet"></i>
+            </button>
           </div>
 
-          <!-- Play Buttons -->
-          <div class="d-flex flex-column align-items-center flex-grow-1">
-            <div class="d-flex justify-content-center">
-              <button class="btn btn-link text-white fs-4">
-                <i class="bi bi-shuffle"></i>
-              </button>
-              <button class="btn btn-link text-white fs-4">
-                <i class="fas fa-step-backward"></i>
-              </button>
-              <button class="btn btn-link text-white fs-4">
-                <i class="fas fa-play"></i>
-              </button>
-              <button class="btn btn-link text-white fs-4">
-                <i class="fas fa-step-forward"></i>
-              </button>
-              <button class="btn btn-link text-white fs-4">
-                <i class="fas fa-retweet"></i>
-              </button>
+          <!-- Progression Bar -->
+          <div
+            class="ms-3 text-white d-flex flex-column align-items-center w-100 px-5"
+          >
+            <div class="w-100">
+              <div
+                class="progress bg-danger"
+                role="progressbar"
+                aria-label="Progress"
+                aria-valuenow="25"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                <div class="progress-bar bg-light" style="width: 25%"></div>
+              </div>
             </div>
-
-            <!-- Progression Bar -->
-            <div
-              class="ms-3 text-white d-flex flex-column align-items-center w-100 px-5"
-            >
-              <div class="w-100">
-                <div
-                  class="progress bg-danger"
-                  role="progressbar"
-                  aria-label="Progress"
-                  aria-valuenow="25"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  <div class="progress-bar bg-light" style="width: 25%"></div>
-                </div>
-              </div>
-              <div class="d-flex justify-content-between w-100 mt-1">
-                <p class="mb-0 fs-8">00:30</p>
-                <p class="mb-0 fs-8">03:00</p>
-              </div>
+            <div class="d-flex justify-content-between w-100 mt-1">
+              <p class="mb-0 fs-8">00:30</p>
+              <p class="mb-0 fs-8">03:00</p>
             </div>
           </div>
+        </div>
 
         <!-- Volume and Widgets -->
         <div class="d-flex align-items-center">
@@ -388,7 +340,7 @@
         </div>
         <div class="d-flex flex-column m-2">
           <!-- User 1 -->
-          <section>
+          <section class="flex-column">
             <img
               src="../img/users/user-2.jpg"
               alt="user_img"
