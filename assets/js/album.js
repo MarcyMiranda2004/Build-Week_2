@@ -1,10 +1,10 @@
 // const apiLink = `https://striveschool-api.herokuapp.com/api/deezer/album/${albumID}`
-const apiLinkTest = "https://striveschool-api.herokuapp.com/api/deezer/album/75621062"
+// const apiLinkTest = "https://striveschool-api.herokuapp.com/api/deezer/album/75621062"
 
-const songImport = function () {
+const songImport = function (albumID) {
     
-
-    fetch(apiLinkTest,{
+const apiLink = `https://striveschool-api.herokuapp.com/api/deezer/album/${albumID}`
+    fetch(apiLink,{
         headers:{
             "Content-Type": "application/json",
             Authorization:
@@ -23,9 +23,11 @@ const songImport = function () {
         const imgAlbum = document.getElementById("img-album")
         const singerImg = document.getElementById("singer-img")
         const albumData = document.getElementById("dati-album")
+        const albumName = document.getElementById("album-name")
         singerImg.src = data.artist.picture
         imgAlbum.src = data.cover
         albumData.innerHTML =`${data.artist.name} - ${data.release_date} - ${data.nb_tracks} - ${(data.duration / 60).toFixed(2)}`
+        albumName.innerHTML = `${data.title} `
         appendElement.innerHTML=` `
         let i = 1
         data.tracks.data.forEach(song => {
