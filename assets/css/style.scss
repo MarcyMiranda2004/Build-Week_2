@@ -45,4 +45,11 @@ $fs-10: 0.5rem;
   font-size: $fs-10;
 }
 
+.hover {
+  &:hover {
+    cursor: pointer;
+    color: $white;
+  }
+}
+
 @import "scss/bootstrap";
