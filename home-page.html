@@ -38,32 +38,85 @@
         <div class="d-flex flex-column border-bottom border-1 border-danger">
           <i class="bi bi-three-dots text-success fs-3 my-1"></i>
           <ul class="list-unstyled fw-bold">
-            <li class="py-2 text-success">
+            <li class="py-2 text-success hover">
               <i class="bi bi-house-door-fill mx-1 text-success fs-4"></i>
               Home
             </li>
-            <li class="py-2 text-success">
+            <li class="py-2 text-success hover">
               <i class="bi bi-search mx-1 text-success fs-4"></i> Cerca
             </li>
-            <li class="py-2 text-success">
+            <li class="py-2 text-success hover">
               <i class="bi bi-collection mx-1 text-success fs-4"></i> La Tua
               Libreria
             </li>
           </ul>
 
           <ul class="list-unstyled fw-bold">
-            <li class="py-2 text-success">
+            <li class="py-2 text-success hover">
               <i class="bi bi-plus-square-fill mx-1 text-success fs-4"></i> Crea
               Playlist
             </li>
-            <li class="py-2 text-success">
+            <li class="py-2 text-success hover">
               <i class="bi bi-heart-fill mx-1 text-success fs-4"></i> Favorite
             </li>
-            <li class="py-2 text-success">
+            <li class="py-2 text-success hover">
               <i class="bi bi-bookmark-fill mx-1 text-success fs-4"></i> I Tuoi
               Episodi
             </li>
           </ul>
+        </div>
+        <!-- Fake playlist -->
+        <div class="my-4">
+          <p class="fs-7 m-2 text-success">Guitar solos that summon demons</p>
+          <p class="fs-7 m-2 text-success">
+            Vocaloid but only the unskippable bangers
+          </p>
+          <p class="fs-7 m-2 text-success">Just one more side quest...</p>
+          <p class="fs-7 m-2 text-success">
+            Anime OPs that make me feel like the MC
+          </p>
+          <p class="fs-7 m-2 text-success">Miku miku oo ee oo</p>
+          <p class="fs-7 m-2 text-success">
+            Bro this sounds like a final boss theme
+          </p>
+          <p class="fs-7 m-2 text-success">
+            Screaming into the abyss but make it music
+          </p>
+          <p class="fs-7 m-2 text-success">
+            I took an arrow in the knee aah soundtrack
+          </p>
+          <p class="fs-7 m-2 text-success">
+            OSTs that go harder than they should
+          </p>
+          <p class="fs-7 m-2 text-success">
+            Miku songs that changed my life fr
+          </p>
+          <p class="fs-7 m-2 text-success">
+            Crying in 2008 while listening to world is mine
+          </p>
+          <p class="fs-7 m-2 text-success">
+            Metal songs that make me feel like a villain
+          </p>
+          <p class="fs-7 m-2 text-success">
+            Chill game bgm but it hits different
+          </p>
+          <p class="fs-7 m-2 text-success">
+            Songs that make me wanna run with toast in my mouth
+          </p>
+          <p class="fs-7 m-2 text-success">
+            Anime music but only the most emotional ones
+          </p>
+          <p class="fs-7 m-2 text-success">
+            Gaming music that makes me feel unstoppable
+          </p>
+          <p class="fs-7 m-2 text-success">Minecraft and chill</p>
+          <p class="fs-7 m-2 text-success">Mosh pit anthems for your soul</p>
+          <p class="fs-7 m-2 text-success">
+            Every anime OP is a banger, prove me wrong
+          </p>
+          <p class="fs-7 m-2 text-success">
+            Metal that makes me wanna punch a dragon
+          </p>
         </div>
       </aside>
 
@@ -100,12 +153,18 @@
         </div>
 
         <!-- Canzone in primo piano -->
-        <div>
-          <img src="..." alt="song_cover" />
-          <div>
+        <div class="row bg-warning mx-4 py-3 d-flex">
+          <div class="col-2 d-flex justify-content-center align-items-center">
+            <img
+              src="./assets/img/main/image-1.jpg"
+              alt="song_cover"
+              class="img-fluid"
+            />
+          </div>
+          <div class="col-9 fw-normal position-relative flex-grow-1">
             <div class="songContainer">
               <p>ALBUM</p>
-              <h1>NOME ALBUM/CANZONE</h1>
+              <h1 class="fw-bold fs-11">NOME ALBUM/CANZONE</h1>
               <p>Nome Artista</p>
               <p>Ascolta il nuovo brano di {ARTISTA}</p>
             </div>
@@ -116,7 +175,11 @@
                 <i class="bi bi-three-dots"></i>
               </button>
             </div>
-            <button>NASCONDI ANNUNCI</button>
+            <button
+              class="btn btn-secodnary text-danger fw-bold position-absolute top-0 end-0 me-2"
+            >
+              NASCONDI ANNUNCI
+            </button>
           </div>
         </div>
 
@@ -126,41 +189,77 @@
 
           <div class="row d-flex justify-content-around gap-3 m-3">
             <!-- Canzone o Album 1 -->
-            <div class="col-md-3 p-3 bg-danger flex-grow-1 mx-2">
-              <img src="..." alt="song_cover" />
-              <p>Nome Canzone/Album</p>
+            <div
+              class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0"
+            >
+              <img
+                src="./assets/img/main/image-12.jpg"
+                alt="song_cover"
+                class="img-fluid w-20 m-0"
+              />
+              <p class="ms-3 mb-0 text-start">Nome Canzone/Album</p>
             </div>
 
             <!-- Canzone o Album 2 -->
-            <div class="col-md-3 p-3 bg-danger flex-grow-1 mx-2">
-              <img src="..." alt="song_cover" />
-              <p>Nome Canzone/Album</p>
+            <div
+              class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0"
+            >
+              <img
+                src="./assets/img/main/image-12.jpg"
+                alt="song_cover"
+                class="img-fluid w-20 m-0"
+              />
+              <p class="ms-3 mb-0 text-start">Nome Canzone/Album</p>
             </div>
 
             <!-- Canzone o Album 3 -->
-            <div class="col-md-3 p-3 bg-danger flex-grow-1 mx-2">
-              <img src="..." alt="song_cover" />
-              <p>Nome Canzone/Album</p>
+            <div
+              class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0"
+            >
+              <img
+                src="./assets/img/main/image-12.jpg"
+                alt="song_cover"
+                class="img-fluid w-20 m-0"
+              />
+              <p class="ms-3 mb-0 text-start">Nome Canzone/Album</p>
             </div>
           </div>
 
           <div class="row d-flex justify-content-around gap-3 m-3">
             <!-- Canzone o Album 4 -->
-            <div class="col-md-3 p-3 bg-danger flex-grow-1 mx-2">
-              <img src="..." alt="song_cover" />
-              <p>Nome Canzone/Album</p>
+            <div
+              class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0"
+            >
+              <img
+                src="./assets/img/main/image-12.jpg"
+                alt="song_cover"
+                class="img-fluid w-20 m-0"
+              />
+              <p class="ms-3 mb-0 text-start">Nome Canzone/Album</p>
             </div>
 
             <!-- Canzone o Album 5 -->
-            <div class="col-md-3 p-3 bg-danger flex-grow-1 mx-2">
-              <img src="..." alt="song_cover" />
-              <p>Nome Canzone/Album</p>
+            <div
+              class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0"
+            >
+              <img
+                src="./assets/img/main/image-12.jpg"
+                alt="song_cover"
+                class="img-fluid w-20 m-0"
+              />
+              <p class="ms-3 mb-0 text-start">Nome Canzone/Album</p>
             </div>
 
             <!-- Canzone o Album 6 -->
-            <div class="col-md-3 p-3 bg-danger flex-grow-1 mx-2">
-              <img src="..." alt="song_cover" />
-              <p>Nome Canzone/Album</p>
+            <div
+              class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0"
+            >
+              <img
+                src="./assets/img/main/image-12.jpg"
+                alt="song_cover"
+                class="img-fluid w-20 m-0"
+              />
+              <p class="ms-3 mb-0 text-start">Nome Canzone/Album</p>
             </div>
           </div>
 
@@ -172,37 +271,37 @@
 
             <!-- Card Canzone o Album 1 -->
             <div class="col col-md-2 d-flex flex-column p-2 bg-secondary">
-              <img src="..." alt="song_cover" />
-              <h6>Titolo Album/canzone</h6>
-              <p>Nome Artista</p>
+              <img src="..." alt="song_cover" class="albumCardImg" />
+              <h6 class="albumCardTitle">Titolo Album/canzone</h6>
+              <p class="albumCardArtist">Nome Artista</p>
             </div>
 
             <!-- Card Canzone o Album 2 -->
             <div class="col col-md-2 d-flex flex-column p-2 bg-secondary">
-              <img src="..." alt="song_cover" />
-              <h6>Titolo Album/canzone</h6>
-              <p>Nome Artista</p>
+              <img src="..." alt="song_cover" class="albumCardImg" />
+              <h6 class="albumCardTitle">Titolo Album/canzone</h6>
+              <p class="albumCardArtist">Nome Artista</p>
             </div>
 
             <!-- Card Canzone o Album 3 -->
             <div class="col col-md-2 d-flex flex-column p-2 bg-secondary">
-              <img src="..." alt="song_cover" />
-              <h6>Titolo Album/canzone</h6>
-              <p>Nome Artista</p>
+              <img src="..." alt="song_cover" class="albumCardImg" />
+              <h6 class="albumCardTitle">Titolo Album/canzone</h6>
+              <p class="albumCardArtist">Nome Artista</p>
             </div>
 
             <!-- Card Canzone o Album 4 -->
             <div class="col col-md-2 d-flex flex-column p-2 bg-secondary">
-              <img src="..." alt="song_cover" />
-              <h6>Titolo Album/canzone</h6>
-              <p>Nome Artista</p>
+              <img src="..." alt="song_cover" class="albumCardImg" />
+              <h6 class="albumCardTitle">Titolo Album/canzone</h6>
+              <p class="albumCardArtist">Nome Artista</p>
             </div>
 
             <!-- Card Canzone o Album 5 -->
             <div class="col col-md-2 d-flex flex-column p-2 bg-secondary">
-              <img src="..." alt="song_cover" />
-              <h6>Titolo Album/canzone</h6>
-              <p>Nome Artista</p>
+              <img src="..." alt="song_cover" class="albumCardImg" />
+              <h6 class="albumCardTitle">Titolo Album/canzone</h6>
+              <p class="albumCardArtist">Nome Artista</p>
             </div>
           </div>
         </div>

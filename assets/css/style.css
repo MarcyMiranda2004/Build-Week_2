@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import "circular.font.css";
+@import "circular-font.css";
 .circular {
   font-family: "Circular", sans-serif;
   font-weight: 500;
@@ -19,6 +19,19 @@
 
 .fs-10 {
   font-size: 0.5rem;
+}
+
+.fs-11 {
+  font-size: 5rem;
+}
+
+.hover:hover {
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.w-20 {
+  width: 20% !important;
 }
 
 /*!
