@@ -72,7 +72,7 @@ const getPopularTracks = function (artistID) {
   
               <div class="flex-grow-1">
                 <h5 class="mb-1">${track.title}</h5>
-                <div class="d-flex justify-content-between">
+                <div class="d-flex justify-content-md-between justify-content-sm-start gap-sm-4 gap-md-3 ">
                   <p class="mb-0 text-secondary">Ascolti: ${track.rank.toLocaleString()}</p>
                   <p class="mb-0 text-secondary">${formatDuration(
                     track.duration
@@ -97,5 +97,76 @@ const formatDuration = (duration) => {
   return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
 };
 
-// Chiamata alla funzione per recuperare e mostrare i brani
-getPopularTracks(4050205); // Passa l'ID dell'artista che desideri
+getPopularTracks(4050205);
+
+const getExtraTracks = function (artistID) {
+  return fetch(
+    `https://striveschool-api.herokuapp.com/api/deezer/artist/${artistID}/top?limit=10`,
+    {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization:
+          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2RkMWYxZDM4MzRiZjAwMTUwMDA2ZmMiLCJpYXQiOjE3NDI1NDQ2NjksImV4cCI6MTc0Mzc1NDI2OX0.Fe1metoCEo3L7Ffjh8C7qiDWYg7k-4Xjt2Cgh2sRa40",
+      },
+    }
+  )
+    .then((response) => {
+      if (response.ok) return response.json();
+      else throw new Error("Errore nel recupero dei brani extra");
+    })
+    .then((data) => {
+      const extraTracksList = document.getElementById("extra-tracks-list");
+      extraTracksList.innerHTML = "";
+      // ATTENTO! Non fare innerHTML = "" ad ogni click
+      data.data.slice(5).forEach((track) => {
+        const listItem = document.createElement("li");
+        listItem.classList.add("mb-3");
+        listItem.innerHTML = `
+            <div class="d-flex align-items-center gap-3">
+              <img src="${track.album.cover_small}" 
+                   alt="cover" 
+                   class="rounded" 
+                   style="width: 60px; height: 60px; object-fit: cover;" />
+              <div class="flex-grow-1">
+                <h5 class="mb-1">${track.title}</h5>
+                <p class="mb-0 text-secondary">Ascolti: ${track.rank.toLocaleString()}</p>
+              </div>
+            </div>
+          `;
+        extraTracksList.appendChild(listItem);
+      });
+    })
+    .catch((err) => console.error("ERROR:", err));
+};
+
+document.getElementById("visualizzaAltroBtn").addEventListener("click", () => {
+  getExtraTracks(4050205);
+});
+let extraVisible = false;
+let extraTracksLoaded = false;
+
+document.getElementById("visualizzaAltroBtn").addEventListener("click", () => {
+  const extraTracksContainer = document.getElementById(
+    "extra-tracks-container"
+  );
+  const btn = document.getElementById("visualizzaAltroBtn");
+
+  if (!extraVisible) {
+    if (!extraTracksLoaded) {
+      getExtraTracks(4050205).then(() => {
+        extraTracksContainer.style.display = "block";
+        btn.textContent = "Nascondi";
+        extraVisible = true;
+        extraTracksLoaded = true;
+      });
+    } else {
+      extraTracksContainer.style.display = "block";
+      btn.textContent = "Nascondi";
+      extraVisible = true;
+    }
+  } else {
+    extraTracksContainer.style.display = "none";
+    btn.textContent = "Visualizza Altro";
+    extraVisible = false;
+  }
+});

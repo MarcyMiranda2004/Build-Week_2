@@ -23,7 +23,7 @@
   </head>
 
   <body
-    class="vh-100 bg-black text-light"
+    class="bg-black text-light"
     style="
       background: linear-gradient(
         0deg,
@@ -32,9 +32,9 @@
       );
     "
   >
-    <div class="row">
+    <div class="row justify-content-center">
       <!-- Side Bar SX -->
-      <aside class="col col-md-2 bg-black ps-4">
+      <aside class="col col-md-2 bg-black ps-4 d-none d-lg-block">
         <div class="d-flex flex-column border-bottom border-1 border-danger">
           <i class="bi bi-three-dots text-success fs-3 my-1"></i>
           <ul class="list-unstyled fw-bold">
@@ -68,7 +68,7 @@
       </aside>
 
       <!-- Main -->
-      <main class="col col-md-9 vh-100 p-0 bg-black text-light">
+      <main class="col col-md-9 min-vh-100 p-0 bg-black text-light">
         <div class="container m-0" id="artist-bg">
           <div class="d-flex justify-content-between">
             <!-- Precedente e Successivo -->
@@ -161,102 +161,33 @@
             </div>
           </div>
         </div>
-      </main>
-      <!-- playbar -->
-      <div
-        class="w-100 fixed-bottom d-flex justify-content-between bg-dark p-2 px-4 align-items-center border-top border-danger"
-      >
-        <!-- Brano in Corso -->
-        <div class="d-flex align-items-center text-white">
-          <img
-            src="..."
-            alt="song_cover"
-            class="rounded-3"
-            style="width: 50px; height: 50px; object-fit: cover"
-          />
-          <div class="ms-2">
-            <h6 class="mb-0 fs-7 fw-bold">Nome Brano</h6>
-            <p class="mb-0 fs-8">Nome Artista</p>
-          </div>
-          <i class="bi bi-heart ms-4 fs-5"></i>
-        </div>
-
-        <!-- Play Buttons -->
-        <div class="d-flex flex-column align-items-center flex-grow-1">
-          <div class="d-flex justify-content-center">
-            <button class="btn btn-link text-white fs-4">
-              <i class="bi bi-shuffle"></i>
-            </button>
-            <button class="btn btn-link text-white fs-4">
-              <i class="fas fa-step-backward"></i>
-            </button>
-            <button class="btn btn-link text-white fs-4">
-              <i class="fas fa-play"></i>
-            </button>
-            <button class="btn btn-link text-white fs-4">
-              <i class="fas fa-step-forward"></i>
-            </button>
-            <button class="btn btn-link text-white fs-4">
-              <i class="fas fa-retweet"></i>
-            </button>
-          </div>
-
-          <!-- Progression Bar -->
-          <div
-            class="ms-3 text-white d-flex flex-column align-items-center w-100 px-5"
-          >
-            <div class="w-100">
-              <div
-                class="progress bg-danger"
-                role="progressbar"
-                aria-label="Progress"
-                aria-valuenow="25"
-                aria-valuemin="0"
-                aria-valuemax="100"
+        <div class="container">
+          <div class="row bg-black">
+            <div class="col-12 my-3 ps-0">
+              <button
+                class="btn btn-outline-secondary px-4"
+                id="visualizzaAltroBtn"
               >
-                <div class="progress-bar bg-light" style="width: 25%"></div>
-              </div>
-            </div>
-            <div class="d-flex justify-content-between w-100 mt-1">
-              <p class="mb-0 fs-8">00:30</p>
-              <p class="mb-0 fs-8">03:00</p>
+                Visualizza Altro
+              </button>
             </div>
           </div>
-        </div>
 
-        <!-- Volume and Widgets -->
-        <div class="d-flex align-items-center">
-          <button class="btn btn-link text-white fs-4">
-            <i class="fas fa-microphone"></i>
-          </button>
-          <button class="btn btn-link text-white fs-4">
-            <i class="fas fa-stream"></i>
-          </button>
-          <button class="btn btn-link text-white fs-4">
-            <i class="bi bi-speaker"></i>
-          </button>
-          <button class="btn btn-link text-white fs-4">
-            <i class="bi bi-volume-down"></i>
-          </button>
           <div
-            class="progress bg-danger"
-            role="progressbar"
-            aria-label="Volume"
-            aria-valuenow="50"
-            aria-valuemin="0"
-            aria-valuemax="100"
-            style="width: 70px"
+            class="row bg-black"
+            id="extra-tracks-container"
+            style="display: none"
           >
-            <div class="progress-bar bg-light" style="width: 50%"></div>
+            <div class="col-12 my-3">
+              <h3 class="fw-bold text-white">Altri Brani</h3>
+              <ol class="list-unstyled" id="extra-tracks-list"></ol>
+            </div>
           </div>
-          <button class="btn btn-link text-white fs-4">
-            <i class="bi bi-fullscreen"></i>
-          </button>
         </div>
-      </div>
+      </main>
 
       <!-- Side Bar DX -->
-      <aside class="col col-md-1 d-flex flex-column bg-black">
+      <aside class="col col-md-1 d-flex flex-column bg-black d-none d-lg-block">
         <div class="d-flex justify-content-between">
           <h5>Attività Amici</h5>
           <div><i class="bi bi-person-add"></i> <i class="bi bi-x-lg"></i></div>
@@ -302,6 +233,100 @@
           </section>
         </div>
       </aside>
+      <footer>
+        <!-- playbar -->
+        <div
+          class="w-100 fixed-bottom d-flex justify-content-between bg-dark p-2 px-4 align-items-center border-top border-danger"
+        >
+          <!-- Brano in Corso -->
+          <div class="d-flex align-items-center text-white">
+            <img
+              src="..."
+              alt="song_cover"
+              class="rounded-3"
+              style="width: 50px; height: 50px; object-fit: cover"
+            />
+            <div class="ms-2">
+              <h6 class="mb-0 fs-7 fw-bold">Nome Brano</h6>
+              <p class="mb-0 fs-8">Nome Artista</p>
+            </div>
+            <i class="bi bi-heart ms-4 fs-5"></i>
+          </div>
+
+          <!-- Play Buttons -->
+          <div class="d-flex flex-column align-items-center flex-grow-1">
+            <div class="d-flex justify-content-center">
+              <button class="btn btn-link text-white fs-4">
+                <i class="bi bi-shuffle"></i>
+              </button>
+              <button class="btn btn-link text-white fs-4">
+                <i class="fas fa-step-backward"></i>
+              </button>
+              <button class="btn btn-link text-white fs-4">
+                <i class="fas fa-play"></i>
+              </button>
+              <button class="btn btn-link text-white fs-4">
+                <i class="fas fa-step-forward"></i>
+              </button>
+              <button class="btn btn-link text-white fs-4">
+                <i class="fas fa-retweet"></i>
+              </button>
+            </div>
+
+            <!-- Progression Bar -->
+            <div
+              class="ms-3 text-white d-flex flex-column align-items-center w-100 px-5"
+            >
+              <div class="w-100">
+                <div
+                  class="progress bg-danger"
+                  role="progressbar"
+                  aria-label="Progress"
+                  aria-valuenow="25"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  <div class="progress-bar bg-light" style="width: 25%"></div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between w-100 mt-1">
+                <p class="mb-0 fs-8">00:30</p>
+                <p class="mb-0 fs-8">03:00</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Volume and Widgets -->
+          <div class="d-flex align-items-center">
+            <button class="btn btn-link text-white fs-4">
+              <i class="fas fa-microphone"></i>
+            </button>
+            <button class="btn btn-link text-white fs-4">
+              <i class="fas fa-stream"></i>
+            </button>
+            <button class="btn btn-link text-white fs-4">
+              <i class="bi bi-speaker"></i>
+            </button>
+            <button class="btn btn-link text-white fs-4">
+              <i class="bi bi-volume-down"></i>
+            </button>
+            <div
+              class="progress bg-danger"
+              role="progressbar"
+              aria-label="Volume"
+              aria-valuenow="50"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              style="width: 70px"
+            >
+              <div class="progress-bar bg-light" style="width: 50%"></div>
+            </div>
+            <button class="btn btn-link text-white fs-4">
+              <i class="bi bi-fullscreen"></i>
+            </button>
+          </div>
+        </div>
+      </footer>
     </div>
 
     <!-- Bootstrap JS -->
