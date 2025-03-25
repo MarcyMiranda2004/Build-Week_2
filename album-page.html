@@ -24,8 +24,8 @@
     <link rel="stylesheet" href="./assets/css/album.css" />
   </head>
 
-  <body class="vh-100 bg-secondary overflow-x-hidden">
-    <div class="row">
+  <body class="bg-secondary overflow-hidden">
+    <div class="row h-100">
       <!-- Side Bar SX -->
       <aside class="col col-md-2 bg-black ps-4">
         <div class="d-flex flex-column border-bottom border-1">
@@ -46,11 +46,19 @@
             <li><i class="bi bi-bookmark-fill"></i> I Tuoi Episodi</li>
           </ul>
         </div>
+        <div>
+          <div>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus
+            vitae, nesciunt unde pariatur eum similique aperiam nam consectetur?
+            Delectus, facilis qui. Dicta soluta tempora modi laboriosam maiores
+            nulla autem facilis.
+          </div>
+        </div>
       </aside>
 
       <!-- Main -->
-      <main class="col col-md-9 vh-100">
-        <div class="container">
+      <main class="col col-md-9">
+        <div class="container d-flex vh-100 flex-column">
           <div class="d-flex justify-content-between">
             <!-- navbar -->
             <div class="d-flex justify-content-center">
@@ -82,19 +90,26 @@
 
           <!-- immagine piu almbum -->
           <div id="album-container" class="d-flex gap-2">
-            <img src="..." alt="..." />
+            <img id="img-album" />
             <div>
               <span>Album</span>
               <h1>Nome Album</h1>
-              <p>
-                {immagine artista}-{Nome artista}-{Anno di rilascio}-{Numero di
-                brani}-{tempo di ascolto}
-              </p>
+              <div class="d-flex align-items-center gap-2">
+                <img
+                  id="singer-img"
+                  src=""
+                  alt=""
+                  class="rounded rounded-circle userImg"
+                />
+                <p id="dati-album">
+                  {immagine artista}-{Nome artista}-{Anno di rilascio}-{Numero
+                  di brani}-{tempo di ascolto}
+                </p>
+              </div>
             </div>
           </div>
 
-          <!-- parte statica con play cuore dowload e 3 puntini -->
-          <div class="d-flex gap-4">
+          <div class="d-flex gap-4 mt-3">
             <i class="bi bi-play-circle-fill"></i>
             <i class="bi bi-heart"></i>
             <i class="bi bi-download"></i>
@@ -104,22 +119,15 @@
           <div class="row border-bottom mt-3">
             <div class="col col-7"># TITOLO</div>
             <div class="col col-3">RIPRODUZIONI</div>
-            <div class="col col-2">ICONE OROLOGIO</div>
-          </div>
-          <!-- chiedi al campa perchè senza js funziona mentre se metti il js devi mettere anche le classi -->
-          <div id="import-container" class="d-flex flex-wrap">
-            <div class="row mt-3">
-              <div class="col col-7 d-flex align-items-center gap-2">
-                <div>1</div>
-                <div>
-                  <h4>Titolo</h4>
-                  <span>nome artista</span>
-                </div>
-              </div>
-              <div class="col col-3">tempo importato</div>
-              <div class="col col-2">durata canzone importata</div>
+            <div class="col col-2">
+              <i class="bi bi-clock"></i>
             </div>
           </div>
+
+          <div
+            id="import-container"
+            class="overflow-y-scroll mh-100 overflow-x-hidden disable-scrollbars"
+          ></div>
         </div>
       </main>
 
@@ -127,7 +135,6 @@
       <div
         class="vw-100 z-3 position-fixed bottom-0 d-flex justify-content-between bg-dark p-2 px-4 min-vw-100"
       >
-        <!-- Brano in Corso -->
         <div>
           <img src="..." alt="song_cover" />
           <div>
@@ -137,7 +144,6 @@
           <i class="bi bi-heart"></i>
         </div>
 
-        <!-- Play Buttons -->
         <div>
           <div class="playButtoncontainer">
             <button><i class="bi bi-shuffle"></i></button>
@@ -147,7 +153,6 @@
             <button><i class="fas fa-retweet"></i></button>
           </div>
 
-          <!-- Progression Bar -->
           <div>
             <p>tempo rimasto</p>
             <div
@@ -164,7 +169,6 @@
           </div>
         </div>
 
-        <!-- Widgets -->
         <div>
           <button><i class="fas fa-microphone"></i></button>
           <button><i class="fas fa-stream"></i></button>
@@ -191,7 +195,6 @@
           <div><i class="bi bi-person-add"></i> <i class="bi bi-x-lg"></i></div>
         </div>
         <div class="d-flex flex-column">
-          <!-- User 1 -->
           <section>
             <img
               src="./assets/img/users/user-2.jpg"
@@ -204,7 +207,6 @@
             <p>4 ore</p>
           </section>
 
-          <!-- User 2 -->
           <section>
             <img
               src="./assets/img/users/user-3.jpg"
@@ -217,7 +219,6 @@
             <p>8 ore</p>
           </section>
 
-          <!-- User 3 -->
           <section>
             <img
               src="./assets/img/users/user-4.jpg"

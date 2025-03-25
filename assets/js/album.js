@@ -1,5 +1,5 @@
-// const apiLink = `https://striveschool-api.herokuapp.com/api/deezer/album/${ID}`
-const apiLinkTest = " https://striveschool-api.herokuapp.com/api/deezer/album/75621062"
+// const apiLink = `https://striveschool-api.herokuapp.com/api/deezer/album/${albumID}`
+const apiLinkTest = "https://striveschool-api.herokuapp.com/api/deezer/album/75621062"
 
 const songImport = function () {
     
@@ -20,6 +20,12 @@ const songImport = function () {
     }).then((data) =>{
         console.log("DATA:", data)
         const appendElement = document.getElementById("import-container")
+        const imgAlbum = document.getElementById("img-album")
+        const singerImg = document.getElementById("singer-img")
+        const albumData = document.getElementById("dati-album")
+        singerImg.src = data.artist.picture
+        imgAlbum.src = data.cover
+        albumData.innerHTML =`${data.artist.name} - ${data.release_date} - ${data.nb_tracks} - ${(data.duration / 60).toFixed(2)}`
         appendElement.innerHTML=` `
         let i = 1
         data.tracks.data.forEach(song => {
@@ -39,7 +45,8 @@ const songImport = function () {
                const columnElementC = document.createElement("div")
                columnElementC.classList.add("col","col-2")
                columnElementC.innerHTML =`${(song.duration / 60).toFixed(2)}`
-                  appendElement.append(columnElement, columnElementB ,columnElementC)
+                  rowElement.append(columnElement, columnElementB ,columnElementC)
+                  appendElement.append(rowElement)
                i++
         });
 
