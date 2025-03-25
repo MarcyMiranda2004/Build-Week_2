@@ -72,7 +72,7 @@ const getPopularTracks = function (artistID) {
   
               <div class="flex-grow-1">
                 <h5 class="mb-1">${track.title}</h5>
-                <div class="d-flex justify-content-md-between justify-content-sm-start gap-sm-4 gap-md-3 ">
+                <div class="d-flex justify-content-md-between justify-content-sm-start gap-4 gap-sm-4 gap-md-3 ">
                   <p class="mb-0 text-secondary">Ascolti: ${track.rank.toLocaleString()}</p>
                   <p class="mb-0 text-secondary">${formatDuration(
                     track.duration
