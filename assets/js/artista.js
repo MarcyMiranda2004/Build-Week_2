@@ -129,7 +129,12 @@ const getExtraTracks = function (artistID) {
                    style="width: 60px; height: 60px; object-fit: cover;" />
               <div class="flex-grow-1">
                 <h5 class="mb-1">${track.title}</h5>
-                <p class="mb-0 text-secondary">Ascolti: ${track.rank.toLocaleString()}</p>
+                <div class="d-flex justify-content-md-between justify-content-sm-start gap-4 gap-sm-4 gap-md-3 ">
+                  <p class="mb-0 text-secondary">Ascolti: ${track.rank.toLocaleString()}</p>
+                  <p class="mb-0 text-secondary">${formatDuration(
+                    track.duration
+                  )}</p>
+                </div>
               </div>
             </div>
           `;
