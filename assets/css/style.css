@@ -30,6 +30,10 @@
   color: #ffffff;
 }
 
+.w-20 {
+  width: 20% !important;
+}
+
 /*!
  * Bootstrap  v5.3.3 (https://getbootstrap.com/)
  * Copyright 2011-2024 The Bootstrap Authors
