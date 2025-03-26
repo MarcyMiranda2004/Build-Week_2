@@ -17,51 +17,150 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
     <!-- Custom Bootstrap -->
-    <link rel="stylesheet" href="./assets/css/scss/custom-bootstrap.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <!-- CSS Home Page serve per le immagini -->
     <link rel="stylesheet" href="./assets/css/home-page.css" />
     <!-- CSS Album page -->
     <link rel="stylesheet" href="./assets/css/album.css" />
   </head>
 
-  <body class="bg-secondary overflow-hidden">
+  <body
+    class="bg-secondary overflow-hidden"
+    style="
+      background: linear-gradient(
+        to bottom,
+        #690e0e,
+        #00000000,
+        #00000000,
+        #00000000
+      );
+    "
+  >
     <div class="row h-100">
       <!-- Side Bar SX -->
       <aside class="col col-md-2 bg-black ps-4">
-        <div class="d-flex flex-column border-bottom border-1">
-          <i class="bi bi-three-dots"></i>
-          <ul class="list-unstyled">
-            <li>
-              <a href="./home-page.html" class="text-reset text-decoration-none"
-                ><i class="bi bi-house-door-fill"></i
-              ></a>
-              Home
+        <div class="d-flex flex-column border-bottom border-1 border-danger">
+          <i class="bi bi-three-dots text-success fs-3 my-1"></i>
+          <ul class="list-unstyled fw-bold">
+            <li class="py-2 text-success hover">
+              <a
+                href="./home-page.html"
+                class="text-decoration-none text-success"
+                ><i class="bi bi-house-door-fill mx-1 fs-4"></i> Home</a
+              >
             </li>
-            <li><i class="bi bi-search"></i> Cerca</li>
-            <li><i class="bi bi-collection"></i> La Tua Libreria</li>
+            <li class="py-2 text-success hover">
+              <i class="bi bi-search mx-1 text-success fs-4"></i> Cerca
+            </li>
+            <li class="py-2 text-success hover">
+              <i class="bi bi-collection mx-1 text-success fs-4"></i> La Tua
+              Libreria
+            </li>
           </ul>
-          <ul class="list-unstyled">
-            <li><i class="bi bi-plus-square-fill"></i> Crea Playlist</li>
-            <li><i class="bi bi-heart-fill"></i> Favorite</li>
-            <li><i class="bi bi-bookmark-fill"></i> I Tuoi Episodi</li>
+
+          <ul class="list-unstyled fw-bold">
+            <li class="py-2 text-success hover d-flex align-items-center">
+              <div class="crea rounded-1 me-2">
+                <i class="bi bi-plus-lg mx-1 text-success fs-4 text-black"></i>
+              </div>
+              Crea Playlist
+            </li>
+
+            <li class="py-2 text-success hover d-flex align-items-center">
+              <div class="crea rounded-1 me-2">
+                <i class="bi bi-plus-lg mx-1 text-success fs-4 text-black"></i>
+              </div>
+              Crea Playlist
+            </li>
+            <li class="py-2 text-success hover d-flex align-items-center">
+              <div class="favorite p-1 rounded-1 me-2">
+                <i class="bi bi-heart-fill mx-1 text-success fs-6"></i>
+              </div>
+              Favorite
+            </li>
+
+            <li class="py-2 text-success hover d-flex align-items-center">
+              <div class="favorite p-1 rounded-1 me-2">
+                <i class="bi bi-heart-fill mx-1 text-success fs-6"></i>
+              </div>
+              Favorite
+            </li>
+            <li class="py-2 text-success hover d-flex align-items-center">
+              <div class="iTuoiEpisodi p-1 rounded-1 me-2">
+                <i class="bi bi-bookmark-fill mx-1 text-success fs-6"></i>
+              </div>
+              I Tuoi Episodi
+            </li>
+
+            <li class="py-2 text-success hover d-flex align-items-center">
+              <div class="iTuoiEpisodi p-1 rounded-1 me-2">
+                <i class="bi bi-bookmark-fill mx-1 text-success fs-6"></i>
+              </div>
+              I Tuoi Episodi
+            </li>
           </ul>
         </div>
-        <div>
-          <div>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus
-            vitae, nesciunt unde pariatur eum similique aperiam nam consectetur?
-            Delectus, facilis qui. Dicta soluta tempora modi laboriosam maiores
-            nulla autem facilis.
-          </div>
+        <!-- Fake playlist -->
+        <div class="my-4 fw-light">
+          <p class="fs-7 m-2 text-success">Guitar solos that summon demons</p>
+          <p class="fs-7 m-2 text-success">
+            Vocaloid but only the unskippable bangers
+          </p>
+          <p class="fs-7 m-2 text-success">Just one more side quest...</p>
+          <p class="fs-7 m-2 text-success">
+            Anime OPs that make me feel like the MC
+          </p>
+          <p class="fs-7 m-2 text-success">Miku miku oo ee oo</p>
+          <p class="fs-7 m-2 text-success">
+            Bro this sounds like a final boss theme
+          </p>
+          <p class="fs-7 m-2 text-success">
+            Screaming into the abyss but make it music
+          </p>
+          <p class="fs-7 m-2 text-success">
+            I took an arrow in the knee aah soundtrack
+          </p>
+          <p class="fs-7 m-2 text-success">
+            OSTs that go harder than they should
+          </p>
+          <p class="fs-7 m-2 text-success">
+            Miku songs that changed my life fr
+          </p>
+          <p class="fs-7 m-2 text-success">
+            Crying in 2008 while listening to world is mine
+          </p>
+          <p class="fs-7 m-2 text-success">
+            Metal songs that make me feel like a villain
+          </p>
+          <p class="fs-7 m-2 text-success">
+            Chill game bgm but it hits different
+          </p>
+          <p class="fs-7 m-2 text-success">
+            Songs that make me wanna run with toast in my mouth
+          </p>
+          <p class="fs-7 m-2 text-success">
+            Anime music but only the most emotional ones
+          </p>
+          <p class="fs-7 m-2 text-success">
+            Gaming music that makes me feel unstoppable
+          </p>
+          <p class="fs-7 m-2 text-success">Minecraft and chill</p>
+          <p class="fs-7 m-2 text-success">Mosh pit anthems for your soul</p>
+          <p class="fs-7 m-2 text-success">
+            Every anime OP is a banger, prove me wrong
+          </p>
+          <p class="fs-7 m-2 text-success">
+            Metal that makes me wanna punch a dragon
+          </p>
         </div>
       </aside>
 
       <!-- Main -->
       <main class="col col-md-9">
-        <div class="container d-flex vh-100 flex-column">
+        <div class="container-fluid d-flex vh-100 flex-column">
           <div class="d-flex justify-content-between">
             <!-- navbar -->
-            <div class="d-flex justify-content-center">
+            <div class="d-flex justify-content-center my-4">
               <i class="bi bi-chevron-left"></i>
               <i class="bi bi-chevron-right"></i>
             </div>
@@ -89,34 +188,38 @@
           </div>
 
           <!-- immagine piu almbum -->
-          <div id="album-container" class="d-flex gap-2">
-            <img id="img-album" />
+          <div id="album-container" class="d-flex gap-4 mx-4">
+            <img src="./assets/img/main/image-1.jpg" id="img-album" />
             <div>
-              <span>Album</span>
-              <h1 id="album-name">Nome Album</h1>
+              <span class="fs-7 fw-bold m-0 p-0">ALBUM</span>
+              <h1 class="fs-11 fw-bold" id="album-name">Nome Album</h1>
               <div class="d-flex align-items-center gap-2">
                 <img
+                  src="./assets/img/main/image-1.jpg"
                   id="singer-img"
                   src=""
                   alt=""
                   class="rounded rounded-circle userImg"
                 />
                 <p id="dati-album">
-                  {immagine artista}-{Nome artista}-{Anno di rilascio}-{Numero
-                  di brani}-{tempo di ascolto}
+                  <span class="fw-bold">{Nome artista}</span>-<span>
+                    {Anno di rilascio </span
+                  >}-<span>{Numero di brani}</span>-<span class="text-success"
+                    >{tempo di ascolto}</span
+                  >
                 </p>
               </div>
             </div>
           </div>
 
-          <div class="d-flex gap-4 mt-3">
-            <i class="bi bi-play-circle-fill"></i>
-            <i class="bi bi-heart"></i>
-            <i class="bi bi-download"></i>
-            <i class="bi bi-three-dots"></i>
+          <div class="d-flex align-items-center gap-4 mt-3 mx-4">
+            <i class="bi bi-play-circle-fill fs-11 text-primary"></i>
+            <i class="bi bi-heart fs-1 text-success"></i>
+            <i class="bi bi-download fs-1 text-success"></i>
+            <i class="bi bi-three-dots fs-1 text-success"></i>
           </div>
 
-          <div class="row border-bottom mt-3">
+          <div class="row border-bottom mt-3 mx-4">
             <div class="col col-7"># TITOLO</div>
             <div class="col col-3">RIPRODUZIONI</div>
             <div class="col col-2">
@@ -133,58 +236,101 @@
 
       <!-- playbar -->
       <div
-        class="vw-100 z-3 position-fixed bottom-0 d-flex justify-content-between bg-dark p-2 px-4 min-vw-100"
+        class="w-100 fixed-bottom d-flex justify-content-between bg-secondary p-2 px-4 align-items-center border-top border-danger"
       >
-        <div>
-          <img src="..." alt="song_cover" />
-          <div>
-            <h6>Nome Brano</h6>
-            <p>Nome Artista</p>
+        <!-- Brano in Corso -->
+        <div class="d-flex align-items-center text-white">
+          <img
+            src="..."
+            alt="song_cover"
+            class="rounded-3"
+            style="width: 50px; height: 50px; object-fit: cover"
+          />
+          <div class="ms-2">
+            <h6 class="mb-0 fs-7 fw-bold">Nome Brano</h6>
+            <p class="mb-0 fs-8">Nome Artista</p>
           </div>
-          <i class="bi bi-heart"></i>
+          <i class="bi bi-heart ms-4 fs-5"></i>
         </div>
 
-        <div>
-          <div class="playButtoncontainer">
-            <button><i class="bi bi-shuffle"></i></button>
-            <button><i class="fas fa-step-backward"></i></button>
-            <button><i class="fas fa-play"></i></button>
-            <button><i class="fas fa-step-forward"></i></button>
-            <button><i class="fas fa-retweet"></i></button>
-          </div>
+        <!-- Play Buttons -->
+        <div class="d-flex flex-column align-items-center flex-grow-1">
+          <div class="d-flex justify-content-center mb-3">
+            <button class="btn btn-link text-white fs-4" id="shuffleButton">
+              <i class="bi bi-shuffle"></i>
+            </button>
 
-          <div>
-            <p>tempo rimasto</p>
-            <div
-              class="progress"
-              role="progressbar"
-              aria-label="Basic example"
-              aria-valuenow="25"
-              aria-valuemin="0"
-              aria-valuemax="100"
+            <button class="btn btn-link text-white fs-4" id="backwardButton">
+              <i class="fas fa-step-backward"></i>
+            </button>
+
+            <button
+              class="btn btn-link fs-4 bg-primary rounded-circle d-flex justify-content-center align-items-center border border-2 border"
+              id="playButton"
             >
-              <div class="progress-bar" style="width: 25%"></div>
+              <i class="fas fa-play"></i>
+            </button>
+
+            <button class="btn btn-link text-white fs-4" id="forwardButton">
+              <i class="fas fa-step-forward"></i>
+            </button>
+
+            <button class="btn btn-link text-white fs-4" id="loopButton">
+              <i class="fas fa-retweet"></i>
+            </button>
+          </div>
+
+          <!-- Progression Bar -->
+          <div
+            class="ms-3 text-white d-flex flex-column align-items-center w-50 px-5"
+          >
+            <div class="w-100">
+              <div
+                class="progress bg-danger"
+                role="progressbar"
+                aria-label="Progress"
+                aria-valuenow="25"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                <div class="progress-bar bg-light" style="width: 25%"></div>
+              </div>
             </div>
-            <p>tempo restante</p>
+            <div class="d-flex justify-content-between w-100 mt-1">
+              <p class="mb-0 fs-8">00:30</p>
+              <p class="mb-0 fs-8">03:00</p>
+            </div>
           </div>
         </div>
 
-        <div>
-          <button><i class="fas fa-microphone"></i></button>
-          <button><i class="fas fa-stream"></i></button>
-          <button><i class="bi bi-speaker"></i></button>
-          <button><i class="bi bi-volume-down"></i></button>
+        <!-- Volume and Widgets -->
+        <div class="d-flex align-items-center">
+          <button class="btn btn-link text-white fs-4">
+            <i class="fas fa-microphone"></i>
+          </button>
+          <button class="btn btn-link text-white fs-4">
+            <i class="fas fa-stream"></i>
+          </button>
+          <button class="btn btn-link text-white fs-4">
+            <i class="bi bi-speaker"></i>
+          </button>
+          <button class="btn btn-link text-white fs-4">
+            <i class="bi bi-volume-down"></i>
+          </button>
           <div
-            class="progress"
+            class="progress bg-danger"
             role="progressbar"
-            aria-label="Basic example"
-            aria-valuenow="0"
+            aria-label="Volume"
+            aria-valuenow="50"
             aria-valuemin="0"
             aria-valuemax="100"
+            style="width: 70px"
           >
-            <div class="progress-bar" style="width: 0%"></div>
+            <div class="progress-bar bg-light" style="width: 50%"></div>
           </div>
-          <button><i class="bi bi-fullscreen"></i></button>
+          <button class="btn btn-link text-white fs-4">
+            <i class="bi bi-fullscreen"></i>
+          </button>
         </div>
       </div>
 
@@ -194,41 +340,70 @@
           <h5>Attività Amici</h5>
           <div><i class="bi bi-person-add"></i> <i class="bi bi-x-lg"></i></div>
         </div>
-        <div class="d-flex flex-column">
-          <section>
+        <div class="d-flex flex-column m-2">
+          <!-- User 1 -->
+          <section class="d-flex align-items-top justify-content-between my-2">
             <img
-              src="./assets/img/users/user-2.jpg"
+              src="/assets/img/users/user-2.jpg"
               alt="user_img"
-              class="rounded rounded-circle userImg"
+              class="rounded-circle userImg me-2"
+              style="width: 30px; height: 30px"
             />
-            <h5>Angelo Zorzi</h5>
-            <p>In Camera &bull; Yumi Zouma</p>
-            <p><i class="bi bi-stop-circle"></i> EP III</p>
-            <p>4 ore</p>
+            <div class="flex-grow-1">
+              <h5 class="fs-6 fw-bold mb-0 text-success">Angelo Zorzi</h5>
+              <p class="fs-8 mb-0 text-success fw-light">
+                In Camera &bull; Yumi Zouma
+              </p>
+              <p class="fs-8 mb-0 text-success">
+                <i class="bi bi-stop-circle text-success"></i> EP III
+              </p>
+            </div>
+            <p class="fs-8 mb-0 text-success">4 ore</p>
           </section>
 
-          <section>
+          <!-- User 2 -->
+          <section class="d-flex align-items-top justify-content-between my-2">
             <img
-              src="./assets/img/users/user-3.jpg"
+              src="/assets/img/users/user-3.jpg"
               alt="user_img"
-              class="rounded rounded-circle userImg"
+              class="rounded rounded-circle userImg me-2"
+              style="width: 30px; height: 30px"
             />
-            <h5>Lucrezia Martinelli</h5>
-            <p>Aimed to Kill &bull; Jade Lemac</p>
-            <p><i class="bi bi-stop-circle"></i> Aimed to Kill</p>
-            <p>8 ore</p>
+            <div class="flex-grow-1">
+              <h5 class="fs-6 fw-bold mb-0 text-success">
+                Lucrezia Martinelli
+              </h5>
+              <p class="fs-8 mb-0 text-success fw-light">
+                Aimed to Kill &bull; Jade Lemac
+              </p>
+              <p class="fs-8 mb-0 text-success">
+                <i class="bi bi-stop-circle text-success"></i> Aimed to Kill
+              </p>
+            </div>
+            <p class="fs-8 mb-0 text-success">8 ore</p>
           </section>
 
-          <section>
+          <!-- User 3 -->
+          <section class="d-flex align-items-top justify-content-between my-2">
             <img
-              src="./assets/img/users/user-4.jpg"
+              src="/assets/img/users/user-4.jpg"
               alt="user_img"
-              class="rounded rounded-circle userImg"
+              class="rounded rounded-circle userImg me-2"
+              style="width: 30px; height: 30px"
             />
-            <h5>Marco Teodoro Mancuso</h5>
-            <p>New Kings &bull; Sleeping Wolf</p>
-            <p><i class="bi bi-music-note-beamed"></i> Twint Badass Mood</p>
-            <p>3 giorni</p>
+            <div class="flex-grow-1">
+              <h5 class="fs-6 fw-bold mb-0 text-success">
+                Marco Teodoro Mancuso
+              </h5>
+              <p class="fs-8 mb-0 text-success fw-light">
+                New Kings &bull; Sleeping Wolf
+              </p>
+              <p class="fs-8 mb-0 text-success">
+                <i class="bi bi-music-note-beamed text-success"></i> Twint
+                Badass Mood
+              </p>
+            </div>
+            <p class="fs-8 mb-0 text-success">3 giorni</p>
           </section>
         </div>
       </aside>
