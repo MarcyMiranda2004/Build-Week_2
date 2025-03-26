@@ -204,76 +204,63 @@
 
           <!-- Sezione Popolari e Brani che ti piacciono -->
           <div class="container-fluid">
-            <div
-              class="row bg-black flex-wrap flex-md-nowrap ms-2 ms-sm-2 ms-md-0"
-            >
+            <div class="row flex-wrap flex-md-nowrap ms-2 ms-sm-2 ms-md-0">
               <!-- Colonna Popolari -->
               <div class="col-12 col-md-6 my-3 order-2 order-md-1">
                 <h2 class="fw-bold d-flex align-items-center">Popolari</h2>
                 <ol class="list-unstyled" id="popular-tracks-list"></ol>
               </div>
-
               <!-- Colonna Brani che ti piacciono -->
-              <div
-                class="col-12 col-md-6 my-3 order-1 order-md-2 d-flex flex-column align-items-md-start text-md-start"
-              >
-                <h5 class="order-1">Brani che ti piacciono</h5>
-                <img
-                  src="..."
-                  alt="artist img"
-                  class="rounded-circle order-0 order-md-1"
-                  id="roundedArtist"
-                />
-              </div>
-            <!-- Colonna Brani che ti piacciono -->
-            <div class="col-12 col-md-6 my-3 order-1 order-md-2">
-              <h4 class="my-3">Brani che ti piacciono</h4>
-              <div class="d-flex align-items-start">
-                <img
-                  src="..."
-                  alt="artist img"
-                  class="rounded-circle me-3"
-                  id="roundedArtist"
-                  style="max-width: 80px"
-                />
-                <div class="m-0 p-0">
-                  <p class="fw-bold">Hai messo Mi Piace a 11 brani</p>
-                  <p class="text-success">di Limp Bizkit</p>
+              <div class="col-12 col-md-6 my-3 order-1 order-md-2">
+                <h4 class="my-3">Brani che ti piacciono</h4>
+                <div class="d-flex align-items-start">
+                  <img
+                    src="..."
+                    alt="artist img"
+                    class="rounded-circle me-3"
+                    id="roundedArtist"
+                    style="max-width: 80px"
+                  />
+                  <div class="m-0 p-0">
+                    <p class="fw-bold">Hai messo Mi Piace a 11 brani</p>
+                    <p class="text-success">di Limp Bizkit</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <!-- Pulsante Visualizza Altro -->
-          <div class="container-fluid text-start ms-1 text-md-start">
-            <div class="row bg-black p-0">
-              <div class="col-12 my-3">
-                <button
-                  class="btn text-success px-4 fw-bold"
-                  id="visualizzaAltroBtn"
-                >
-                  VISUALIZZA ALTRO
-                </button>
+            <!-- Pulsante Visualizza Altro -->
+            <div class="container-fluid text-start ms-1 text-md-start">
+              <div class="row p-0">
+                <div class="col-12 my-3">
+                  <button
+                    class="btn text-success px-4 fw-bold"
+                    id="visualizzaAltroBtn"
+                  >
+                    VISUALIZZA ALTRO
+                  </button>
+                </div>
               </div>
-            </div>
 
-            <!-- Sezione Altri Brani -->
-            <div
-              class="row h-auto"
-              id="extra-tracks-container"
-              style="display: none"
-            >
+              <!-- Sezione Altri Brani -->
               <div
-                class="col-12 my-3 d-flex flex-column align-items-start justify-content-center text-start"
+                class="row h-auto"
+                id="extra-tracks-container"
+                style="display: none"
               >
-                <h3 class="fw-bold text-white">Altri Brani</h3>
-                <ol class="list-unstyled" id="extra-tracks-list"></ol>
+                <div
+                  class="col-12 my-3 d-flex flex-column align-items-start justify-content-center text-start"
+                >
+                  <h3 class="fw-bold text-white">Altri Brani</h3>
+                  <ol class="list-unstyled" id="extra-tracks-list"></ol>
+                </div>
               </div>
             </div>
           </div>
         </main>
 
         <!-- Playbar -->
+
         <div
           class="w-100 fixed-bottom d-flex justify-content-between bg-secondary p-2 px-4 align-items-center border-top border-danger"
         >
