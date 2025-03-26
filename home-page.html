@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Spotify - Home Page</title>
+
     <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -11,15 +12,19 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+
     <!-- Bootstrap Icon -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
+
     <!-- Custom Bootstrap -->
     <link rel="stylesheet" href="./assets/css/style.css" />
+
     <!-- CSS Home Page -->
     <link rel="stylesheet" href="./assets/css/home-page.css" />
+
     <!-- CSS Playbar -->
     <link rel="stylesheet" href="./assets/css/playbar.css" />
   </head>
@@ -83,40 +88,40 @@
         <p class="fs-6 m-2 text-success">
           Bro this sounds like a final boss theme
         </p>
-        <p class="fs-7 m-2 text-success">
+        <p class="fs-6 m-2 text-success">
           Screaming into the abyss but make it music
         </p>
-        <p class="fs-7 m-2 text-success">
+        <p class="fs-6 m-2 text-success">
           I took an arrow in the knee aah soundtrack
         </p>
-        <p class="fs-7 m-2 text-success">
+        <p class="fs-6 m-2 text-success">
           OSTs that go harder than they should
         </p>
-        <p class="fs-7 m-2 text-success">Miku songs that changed my life fr</p>
-        <p class="fs-7 m-2 text-success">
+        <p class="fs-6 m-2 text-success">Miku songs that changed my life fr</p>
+        <p class="fs-6 m-2 text-success">
           Crying in 2008 while listening to world is mine
         </p>
-        <p class="fs-7 m-2 text-success">
+        <p class="fs-6 m-2 text-success">
           Metal songs that make me feel like a villain
         </p>
-        <p class="fs-7 m-2 text-success">
+        <p class="fs-6 m-2 text-success">
           Chill game bgm but it hits different
         </p>
-        <p class="fs-7 m-2 text-success">
+        <p class="fs-6 m-2 text-success">
           Songs that make me wanna run with toast in my mouth
         </p>
-        <p class="fs-7 m-2 text-success">
+        <p class="fs-6 m-2 text-success">
           Anime music but only the most emotional ones
         </p>
-        <p class="fs-7 m-2 text-success">
+        <p class="fs-6 m-2 text-success">
           Gaming music that makes me feel unstoppable
         </p>
-        <p class="fs-7 m-2 text-success">Minecraft and chill</p>
-        <p class="fs-7 m-2 text-success">Mosh pit anthems for your soul</p>
-        <p class="fs-7 m-2 text-success">
+        <p class="fs-6 m-2 text-success">Minecraft and chill</p>
+        <p class="fs-6 m-2 text-success">Mosh pit anthems for your soul</p>
+        <p class="fs-6 m-2 text-success">
           Every anime OP is a banger, prove me wrong
         </p>
-        <p class="fs-7 m-2 text-success">
+        <p class="fs-6 m-2 text-success">
           Metal that makes me wanna punch a dragon
         </p>
       </div>
@@ -124,17 +129,17 @@
 
     <!-- Main -->
     <main class="col col-md-8 vh-100">
-      <div class="d-flex justify-content-between">
+      <div class="d-flex justify-content-between m-3">
         <!-- Precedente e Successivo -->
         <div>
-          <i class="fas fa-chevron-left"></i>
-          <i class="fas fa-chevron-right"></i>
+          <i class="fas fa-chevron-left previousSong fs-5"></i>
+          <i class="fas fa-chevron-right nextSong fs-5"></i>
         </div>
 
         <!-- User Dropdown Menu -->
         <div class="dropdown">
           <button
-            class="btn btn-secondary dropdown-toggle"
+            class="btn btn-secondary dropdown-toggle bg-black rounded-pill p-1 pe-3"
             type="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
@@ -155,12 +160,12 @@
       </div>
 
       <!-- Canzone in primo piano -->
-      <div class="row bg-warning mx-4 py-3 d-flex">
+      <div class="row mx-4 py-3 d-flex mainSong">
         <div class="col-2 d-flex justify-content-center align-items-center">
           <img
             src="./assets/img/main/image-1.jpg"
             alt="song_cover"
-            class="img-fluid"
+            class="img-fluid playlistCardImg"
             id="closeAppSongImg"
           />
         </div>
@@ -182,12 +187,12 @@
             >
               Salva
             </button>
-            <button class="btn btn-warning rounded-pill mx-2 p-2 px-4 fs-4">
+            <button class="btn bg-transparent rounded-pill mx-2 p-2 px-4 fs-4">
               <i class="bi bi-three-dots"></i>
             </button>
           </div>
           <button
-            class="btn btn-secodnary text-danger fw-bold position-absolute top-0 end-0 me-3 rounded-4 bg-secondary hide"
+            class="btn fw-bold position-absolute top-0 end-0 me-3 rounded-4 bg-secondary hide fs-7"
           >
             NASCONDI ANNUNCI
           </button>
@@ -199,99 +204,81 @@
         <h2 class="ms-3 fs-1">Buonasera</h2>
 
         <div class="row d-flex justify-content-around gap-3 m-3">
-          <!-- Canzone o Album 1 -->
+          <!-- Playlist 1 -->
           <div
-            class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0 rounded-1"
-            class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0 rounded-1"
+            class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0 rounded-1 playlistCardImg rounded-2"
           >
             <img
               src="./assets/img/other/liked songs.png"
               src="./assets/img/other/liked songs.png"
               alt="song_cover"
               class="img-fluid w-20 m-0 rounded-start-2 cursor-pointer"
-              class="img-fluid w-20 m-0 rounded-1"
             />
             <p class="ms-3 mb-0 text-start">Brani che ti piacciono</p>
           </div>
 
-          <!-- Canzone o Album 2 -->
+          <!-- Playlist 2 -->
           <div
-            class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0 rounded-1"
-            class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0 rounded-1"
+            class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0 rounded-1 playlistCardImg rounded-2"
           >
             <img
-              src="./assets/img/main/image-12.jpg"
+              src="./assets/img/main/image-5.jpg"
               alt="song_cover"
               class="img-fluid w-20 m-0 rounded-start-2 cursor-pointer"
-              class="img-fluid w-20 m-0 rounded-1"
+            />
+            <p class="ms-3 mb-0 text-start cursor-pointer">lofi beats</p>
+          </div>
+
+          <!-- Playlist 3 -->
+          <div
+            class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0 rounded-1 playlistCardImg rounded-2"
+          >
+            <img
+              src="./assets/img/main/image-6.jpg"
+              alt="song_cover"
+              class="img-fluid w-20 m-0 rounded-start-2 cursor-pointer"
+            />
+            <p class="ms-3 mb-0 text-start cursor-pointer">Jazz Time</p>
+          </div>
+
+          <!-- Playlist 4 -->
+          <div
+            class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0 rounded-1 playlistCardImg rounded-2"
+          >
+            <img
+              src="./assets/img/search/image-1.jpeg"
+              alt="song_cover"
+              class="img-fluid w-20 m-0 rounded-start-2 cursor-pointer"
             />
             <p class="ms-3 mb-0 text-start cursor-pointer">
-              Nome Canzone/Album
+              Scoperte Settimanali
             </p>
           </div>
 
-          <!-- Canzone o Album 3 -->
+          <!-- Playlist 5 -->
           <div
-            class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0 rounded-1"
-            class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0 rounded-1"
+            class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0 rounded-1 playlistCardImg rounded-2"
           >
             <img
-              src="./assets/img/main/image-12.jpg"
+              src="./assets/img/search/image-29.jpg"
               alt="song_cover"
               class="img-fluid w-20 m-0 rounded-start-2 cursor-pointer"
-              class="img-fluid w-20 m-0 rounded-1"
             />
             <p class="ms-3 mb-0 text-start cursor-pointer">
-              Nome Canzone/Album
+              Classic Essentials
             </p>
           </div>
 
-          <!-- Canzone o Album 4 -->
+          <!-- Playlist 6 -->
           <div
-            class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0 rounded-1"
-            class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0 rounded-1"
+            class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0 rounded-1 playlistCardImg rounded-2"
           >
             <img
-              src="./assets/img/main/image-12.jpg"
+              src="./assets/img/search/image-38.jpg"
               alt="song_cover"
               class="img-fluid w-20 m-0 rounded-start-2 cursor-pointer"
-              class="img-fluid w-20 m-0 rounded-1"
             />
-            <p class="ms-3 mb-0 text-start cursor-pointer">
-              Nome Canzone/Album
-            </p>
-          </div>
-
-          <!-- Canzone o Album 5 -->
-          <div
-            class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0 rounded-1"
-            class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0 rounded-1"
-          >
-            <img
-              src="./assets/img/main/image-12.jpg"
-              alt="song_cover"
-              class="img-fluid w-20 m-0 rounded-start-2 cursor-pointer"
-              class="img-fluid w-20 m-0 rounded-1"
-            />
-            <p class="ms-3 mb-0 text-start cursor-pointer">
-              Nome Canzone/Album
-            </p>
-          </div>
-
-          <!-- Canzone o Album 6 -->
-          <div
-            class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0 rounded-1"
-            class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0 rounded-1"
-          >
-            <img
-              src="./assets/img/main/image-12.jpg"
-              alt="song_cover"
-              class="img-fluid w-20 m-0 rounded-start-2 cursor-pointer"
-              class="img-fluid w-20 m-0 rounded-1"
-            />
-            <p class="ms-3 mb-0 text-start cursor-pointer">
-              Nome Canzone/Album
-            </p>
+            <p class="ms-3 mb-0 text-start cursor-pointer">Karaoke Mix</p>
           </div>
         </div>
       </div>
@@ -476,7 +463,9 @@
     <aside class="col col-md-2 d-flex flex-column bg-black">
       <div class="d-flex justify-content-between align-items-center p-1">
         <h5 class="fw-bold m-2 fs-6">Attività Amici</h5>
-        <div><i class="bi bi-person-add"></i> <i class="bi bi-x-lg"></i></div>
+        <div>
+          <i class="bi bi-person-add p-1"></i> <i class="bi bi-x-lg p-1"></i>
+        </div>
       </div>
       <div class="d-flex flex-column m-1">
         <!-- Amico 1 -->
