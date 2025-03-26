@@ -3,7 +3,8 @@ const getArtist = function (artistID) {
   fetch(artistURL, {
     headers: {
       "Content-Type": "application/json",
-      Authorization: "Bearer <IL_TUO_TOKEN>",
+      Authorization:
+        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2RkMWYxZDM4MzRiZjAwMTUwMDA2ZmMiLCJpYXQiOjE3NDI1NDQ2NjksImV4cCI6MTc0Mzc1NDI2OX0.Fe1metoCEo3L7Ffjh8C7qiDWYg7k-4Xjt2Cgh2sRa40",
     },
   })
     .then((response) =>
