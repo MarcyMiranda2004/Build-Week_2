@@ -1,6 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const albumIds = ["915798", "288645872", "10655968", "331818647", "12114240"];
-  // Il Sogno Eretico, Kyougen, Skills In Pills, Mercury, Dark Side Of The Moon
+  const albumIds = [
+    "915798", //Il Sogno Eretico - Caparezza
+    "288645872", //Kyougen - Ado
+    "10655968", //Skills In Pills - Linndeman
+    "331818647", //Mercury - Immagine Dragons
+    "12114240", //Dark Side Of The Moon - Pink Floyd
+    "61504292", //September - Earth, Wind And Fire
+    "603420362", //Trollslayer - Wind Rose
+    "434301617", //Hajimeteno - Yaosobi
+    "730631321", //Volevo Essere Un Duro - Lucio Corsi
+    "699739251", //Till The Curtain Call - The Vanished People
+  ];
 
   albumIds.forEach((id, i) => {
     const albumURL = `https://striveschool-api.herokuapp.com/api/deezer/album/${id}`;

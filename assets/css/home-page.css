@@ -20,11 +20,32 @@ i {
   cursor: pointer;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
 
-/* ----- Main ------ */
+/* ---------- Main ----------- */
+.previousSong,
+.nextSong {
+  background-color: #131313;
+  padding: 0.6rem;
+  border-radius: 50%;
+  width: 2.6rem;
+  text-align: center;
+  margin: 0 10px;
+  transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+.previousSong:active,
+.nextSong:active {
+  transform: scale(0.9);
+}
+
 .userImg {
   width: 40px;
   height: 40px;
@@ -36,12 +57,24 @@ i {
   color: black;
 }
 
+.playlistCardImg {
+  box-shadow: 0px 10px 15px rgba(1, 1, 1, 0.2),
+    0px 20px 30px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+.playlistCardImg:active {
+  transform: scale(0.95);
+}
+
 .albumCardImg {
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2),
     0px 20px 30px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out;
 }
+
 .albumCardImg:active {
   transform: scale(0.9);
 }
@@ -51,7 +84,17 @@ i {
   background-color: black;
 }
 
-/* -----Side Bar SX -----*/
+/* Canzone in Primo Piano */
+.mainSong {
+  background: linear-gradient(to bottom left, #272727, #000000);
+}
+
+.hide {
+  background-color: #1f1f1f !important;
+  color: #909090;
+}
+
+/* ----------Side Bar SX ----------*/
 /* Icone */
 .crea {
   background-color: #b3b3b3;
@@ -72,6 +115,14 @@ i {
 
 /* ----- Side Bar DX ----- */
 /* Amici */
+.bi-person-add:hover {
+  background-color: #149643;
+}
+
+.bi-x-lg:hover {
+  background-color: red;
+}
+
 .userTime {
   position: absolute;
   top: 0;
