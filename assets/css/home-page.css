@@ -1,4 +1,8 @@
 /* General */
+html {
+  background-color: #1c1c1c !important;
+}
+
 * {
   color: white;
 }
@@ -8,16 +12,38 @@ aside {
   padding-bottom: 18.5rem;
 }
 
+main {
+  background-color: #1c1c1c !important;
+}
+
 i {
   cursor: pointer;
 }
 
-.userImg {
-  width: 30px;
-}
-
 .cursor-pointer {
   cursor: pointer;
+}
+
+/* ----- Main ------ */
+.userImg {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.saveButton:hover {
+  background-color: white;
+  color: black;
+}
+
+.albumCardImg {
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2),
+    0px 20px 30px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+.albumCardImg:active {
+  transform: scale(0.9);
 }
 
 /* Dropdown */
@@ -25,7 +51,8 @@ i {
   background-color: black;
 }
 
-/* Icone Side Bar SX */
+/* -----Side Bar SX -----*/
+/* Icone */
 .crea {
   background-color: #b3b3b3;
 }
@@ -43,6 +70,14 @@ i {
   color: #149643 !important;
 }
 
+/* ----- Side Bar DX ----- */
+/* Amici */
+.userTime {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
 /* Playlist */
 .playlist p {
   cursor: pointer;
@@ -52,24 +87,4 @@ i {
 .playlist p:hover {
   background-color: rgb(41, 41, 41);
   transform: scale(1.1) translateX(20px);
-}
-
-/* Playbar */
-#shuffleButton:active {
-  color: #149643 !important;
-}
-
-#backwardButton:active {
-  color: #149643;
-}
-
-#playButton {
-}
-
-#forwardButton:active {
-  color: #149643;
-}
-
-#loopButton:active {
-  color: #149643;
 }
