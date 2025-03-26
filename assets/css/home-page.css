@@ -1,7 +1,75 @@
+/* General */
 * {
   color: white;
 }
 
+main,
+aside {
+  padding-bottom: 18.5rem;
+}
+
+i {
+  cursor: pointer;
+}
+
 .userImg {
   width: 30px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* Dropdown */
+.dropdown-item:hover {
+  background-color: black;
+}
+
+/* Icone Side Bar SX */
+.crea {
+  background-color: #b3b3b3;
+}
+
+.favorite {
+  background: linear-gradient(135deg, #4632f1, #bff0d7);
+  color: #828282;
+}
+
+.iTuoiEpisodi {
+  background-color: #004537;
+}
+
+.iTuoiEpisodi .bi-bookmark-fill {
+  color: #149643 !important;
+}
+
+/* Playlist */
+.playlist p {
+  cursor: pointer;
+  transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+.playlist p:hover {
+  background-color: rgb(41, 41, 41);
+  transform: scale(1.1) translateX(20px);
+}
+
+/* Playbar */
+#shuffleButton:active {
+  color: #149643 !important;
+}
+
+#backwardButton:active {
+  color: #149643;
+}
+
+#playButton {
+}
+
+#forwardButton:active {
+  color: #149643;
+}
+
+#loopButton:active {
+  color: #149643;
 }
