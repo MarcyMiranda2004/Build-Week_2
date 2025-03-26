@@ -24,7 +24,18 @@
     <link rel="stylesheet" href="./assets/css/album.css" />
   </head>
 
-  <body class="bg-secondary overflow-hidden">
+  <body
+    class="bg-secondary overflow-hidden"
+    style="
+      background: linear-gradient(
+        to bottom,
+        #690e0e,
+        #00000000,
+        #00000000,
+        #00000000
+      );
+    "
+  >
     <div class="row h-100">
       <!-- Side Bar SX -->
       <aside class="col col-md-2 bg-black ps-4">
@@ -146,10 +157,10 @@
 
       <!-- Main -->
       <main class="col col-md-9">
-        <div class="container d-flex vh-100 flex-column">
+        <div class="container d-flex vh-100 flex-column mx-3">
           <div class="d-flex justify-content-between">
             <!-- navbar -->
-            <div class="d-flex justify-content-center">
+            <div class="d-flex justify-content-center my-4">
               <i class="bi bi-chevron-left"></i>
               <i class="bi bi-chevron-right"></i>
             </div>
@@ -177,31 +188,35 @@
           </div>
 
           <!-- immagine piu almbum -->
-          <div id="album-container" class="d-flex gap-2">
-            <img id="img-album" />
+          <div id="album-container" class="d-flex gap-4">
+            <img src="./assets/img/main/image-1.jpg" id="img-album" />
             <div>
-              <span>Album</span>
-              <h1 id="album-name">Nome Album</h1>
+              <span class="fs-7 fw-bold m-0 p-0">ALBUM</span>
+              <h1 class="fs-11 fw-bold" id="album-name">Nome Album</h1>
               <div class="d-flex align-items-center gap-2">
                 <img
+                  src="./assets/img/main/image-1.jpg"
                   id="singer-img"
                   src=""
                   alt=""
                   class="rounded rounded-circle userImg"
                 />
                 <p id="dati-album">
-                  {immagine artista}-{Nome artista}-{Anno di rilascio}-{Numero
-                  di brani}-{tempo di ascolto}
+                  <span class="fw-bold">{Nome artista}</span>-<span>
+                    {Anno di rilascio </span
+                  >}-<span>{Numero di brani}</span>-<span class="text-success"
+                    >{tempo di ascolto}</span
+                  >
                 </p>
               </div>
             </div>
           </div>
 
-          <div class="d-flex gap-4 mt-3">
-            <i class="bi bi-play-circle-fill"></i>
-            <i class="bi bi-heart"></i>
-            <i class="bi bi-download"></i>
-            <i class="bi bi-three-dots"></i>
+          <div class="d-flex align-items-center gap-4 mt-3">
+            <i class="bi bi-play-circle-fill fs-11 text-primary"></i>
+            <i class="bi bi-heart fs-1 text-success"></i>
+            <i class="bi bi-download fs-1 text-success"></i>
+            <i class="bi bi-three-dots fs-1 text-success"></i>
           </div>
 
           <div class="row border-bottom mt-3">
