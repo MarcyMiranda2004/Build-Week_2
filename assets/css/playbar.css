@@ -1,0 +1,120 @@
+/* Brano in Riproduzione */
+.actualSong {
+  width: 75px;
+  object-fit: cover;
+  margin-right: 5px;
+}
+
+/* General Settings */
+.playbarButton {
+  background-color: transparent;
+  border-radius: 100%;
+  border: none;
+  margin: 0 5px;
+}
+
+/* Shuffle Button */
+#shuffleButton {
+  position: relative;
+}
+
+#shuffleButton.active i {
+  color: #149643 !important;
+}
+
+#shuffleButton.active::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: #149643;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 1px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Backward Button */
+#backwardButton i:active {
+  color: #149643 !important;
+}
+
+/* Play Button */
+.playButton:active {
+  background-color: #149643 !important;
+}
+
+/* Forward Button */
+#forwardButton i:active {
+  color: #149643 !important;
+}
+
+/* Loop Button */
+#loopButton {
+  position: relative;
+}
+
+#loopButton.active i {
+  color: #149643 !important;
+}
+
+#loopButton.active::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: #149643;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 1px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* --------- Progression Bar */
+.progressionBar {
+  height: 5px !important;
+}
+
+.progress-bar {
+  background-color: #149643 !important;
+}
+
+/* ---------- Widgets ---------- */
+
+/* Volume */
+.volumeControl {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 30%;
+  height: 10px;
+  border-radius: 5px;
+  outline: none;
+  padding: 0 2px;
+}
+
+.volumeControl::-webkit-slider-runnable-track {
+  background: #ddd;
+  height: 6px;
+  border-radius: 5px;
+}
+
+.volumeControl::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 8px;
+  height: 8px;
+  background: #149643;
+  cursor: pointer;
+  border-radius: 50%;
+  margin-top: -1px;
+  transform: scale(1);
+}
+
+/* Karaoke Button*/
+.widgetsButton {
+  background-color: transparent;
+  border: none;
+  margin: 0 5px;
+  padding: 5px;
+  position: relative;
+}
