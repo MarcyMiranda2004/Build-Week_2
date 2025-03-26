@@ -21,533 +21,512 @@
     <!-- CSS Home Page -->
     <link rel="stylesheet" href="./assets/css/home-page.css" />
     <!-- CSS Playbar -->
-     <link rel="stylesheet" href="./assets/css/playbar.css">
+    <link rel="stylesheet" href="./assets/css/playbar.css" />
   </head>
 
-  <body
-    class="vh-100 bg-secondary circular row"
-  >
-      <!-- Side Bar SX -->
-      <aside class="col col-md-2 bg-black ps-4">
-        <div class="d-flex flex-column border-bottom border-1 border-danger">
-          <i class="bi bi-three-dots text-success fs-3 my-1"></i>
-          <ul class="list-unstyled fw-bold">
-            <li class="py-2 text-success hover">
-              <a
-                href="./home-page.html"
-                class="text-decoration-none text-success"
-                ><i class="bi bi-house-door-fill mx-1 fs-4"></i> Home</a
-              >
-            </li>
-            <li class="py-2 text-success hover">
-              <i class="bi bi-search mx-1 text-success fs-4"></i> Cerca
-            </li>
-            <li class="py-2 text-success hover">
-              <i class="bi bi-collection mx-1 text-success fs-4"></i> La Tua
-              Libreria
-            </li>
-          </ul>
-
-          <ul class="list-unstyled fw-bold">
-            <li class="py-2 text-success hover d-flex align-items-center">
-              <div class="crea rounded-1 me-2">
-                <i class="bi bi-plus-lg mx-1 text-success fs-4 text-black"></i>
-              </div>
-              Crea Playlist
-            <li class="py-2 text-success hover d-flex align-items-center">
-              <div class="favorite p-1 rounded-1 me-2">
-                <i class="bi bi-heart-fill mx-1 text-success fs-6"></i>
-              </div>
-              Favorite
-            </li>
-            <li class="py-2 text-success hover d-flex align-items-center">
-              <div class="iTuoiEpisodi p-1 rounded-1 me-2">
-                <i class="bi bi-bookmark-fill mx-1 text-success fs-6"></i>
-              </div>
-              I Tuoi Episodi
-            </li>
-          </ul>
-        </div>
-        <!-- Fake playlist -->
-        <div class="my-4 playlist">
-          <p class="fs-6 m-2 text-success">Guitar solos that summon demons</p>
-          <p class="fs-6 m-2 text-success">
-        <div class="my-4 playlist">
-          <p class="fs-6 m-2 text-success">
-            Vocaloid but only the unskippable bangers
-          </p>
-          <p class="fs-6 m-2 text-success">Just one more side quest...</p>
-          <p class="fs-6 m-2 text-success">
-          <p class="fs-6 m-2 text-success">
-            Anime OPs that make me feel like the MC
-          </p>
-          <p class="fs-6 m-2 text-success">Miku miku oo ee oo</p>
-          <p class="fs-6 m-2 text-success">
-          <p class="fs-6 m-2 text-success">
-            Bro this sounds like a final boss theme
-          </p>
-          <p class="fs-7 m-2 text-success">
-            Screaming into the abyss but make it music
-          </p>
-          <p class="fs-7 m-2 text-success">
-            I took an arrow in the knee aah soundtrack
-          </p>
-          <p class="fs-7 m-2 text-success">
-            OSTs that go harder than they should
-          </p>
-          <p class="fs-7 m-2 text-success">
-            Miku songs that changed my life fr
-          </p>
-          <p class="fs-7 m-2 text-success">
-            Crying in 2008 while listening to world is mine
-          </p>
-          <p class="fs-7 m-2 text-success">
-            Metal songs that make me feel like a villain
-          </p>
-          <p class="fs-7 m-2 text-success">
-            Chill game bgm but it hits different
-          </p>
-          <p class="fs-7 m-2 text-success">
-            Songs that make me wanna run with toast in my mouth
-          </p>
-          <p class="fs-7 m-2 text-success">
-            Anime music but only the most emotional ones
-          </p>
-          <p class="fs-7 m-2 text-success">
-            Gaming music that makes me feel unstoppable
-          </p>
-          <p class="fs-7 m-2 text-success">Minecraft and chill</p>
-          <p class="fs-7 m-2 text-success">Mosh pit anthems for your soul</p>
-          <p class="fs-7 m-2 text-success">
-            Every anime OP is a banger, prove me wrong
-          </p>
-          <p class="fs-7 m-2 text-success">
-            Metal that makes me wanna punch a dragon
-          </p>
-        </div>
-      </aside>
-
-      <!-- Main -->
-      <main class="col col-md-8 vh-100">
-        <div class="d-flex justify-content-between">
-          <!-- Precedente e Successivo -->
-          <div>
-            <i class="fas fa-chevron-left"></i>
-            <i class="fas fa-chevron-right"></i>
-          </div>
-
-          <!-- User Dropdown Menu -->
-          <div class="dropdown">
-            <button
-              class="btn btn-secondary dropdown-toggle"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
+  <body class="vh-100 bg-secondary circular row">
+    <!-- Side Bar SX -->
+    <aside class="col col-md-2 bg-black ps-4">
+      <div class="d-flex flex-column border-bottom border-1 border-danger">
+        <i class="bi bi-three-dots text-success fs-3 my-1"></i>
+        <ul class="list-unstyled fw-bold">
+          <li class="py-2 text-success hover">
+            <a href="./home-page.html" class="text-decoration-none text-success"
+              ><i class="bi bi-house-door-fill mx-1 fs-4"></i> Home</a
             >
-              <img
-                src="./assets/img/users/user-1.png"
-                alt="user_img"
-                class="rounded-circle userImg"
-              />
-              Marcello Miranda ...
-            </button>
-            <ul class="dropdown-menu bg-secondary border border-1">
-              <li><a class="dropdown-item text-white" href="#">Account</a></li>
-              <li><a class="dropdown-item text-white" href="#">Settings</a></li>
-              <li><a class="dropdown-item text-white" href="#">Logout</a></li>
-            </ul>
-          </div>
+          </li>
+
+          <li class="py-2 text-success hover">
+            <i class="bi bi-search mx-1 text-success fs-4"></i> Cerca
+          </li>
+
+          <li class="py-2 text-success hover">
+            <i class="bi bi-collection mx-1 text-success fs-4"></i> La Tua
+            Libreria
+          </li>
+        </ul>
+
+        <ul class="list-unstyled fw-bold">
+          <li class="py-2 text-success hover d-flex align-items-center">
+            <div class="crea rounded-1 me-2">
+              <i class="bi bi-plus-lg mx-1 text-success fs-4 text-black"></i>
+            </div>
+            Crea Playlist
+          </li>
+
+          <li class="py-2 text-success hover d-flex align-items-center">
+            <div class="favorite p-1 rounded-1 me-2">
+              <i class="bi bi-heart-fill mx-1 text-success fs-6"></i>
+            </div>
+            Favorite
+          </li>
+
+          <li class="py-2 text-success hover d-flex align-items-center">
+            <div class="iTuoiEpisodi p-1 rounded-1 me-2">
+              <i class="bi bi-bookmark-fill mx-1 text-success fs-6"></i>
+            </div>
+            I Tuoi Episodi
+          </li>
+        </ul>
+      </div>
+      <!-- Fake playlist -->
+      <div class="my-4 playlist">
+        <p class="fs-6 m-2 text-success">Guitar solos that summon demons</p>
+        <p class="fs-6 m-2 text-success">
+          Vocaloid but only the unskippable bangers
+        </p>
+        <p class="fs-6 m-2 text-success">Just one more side quest...</p>
+        <p class="fs-6 m-2 text-success">
+          Anime OPs that make me feel like the MC
+        </p>
+        <p class="fs-6 m-2 text-success">Miku miku oo ee oo</p>
+        <p class="fs-6 m-2 text-success">
+          Bro this sounds like a final boss theme
+        </p>
+        <p class="fs-7 m-2 text-success">
+          Screaming into the abyss but make it music
+        </p>
+        <p class="fs-7 m-2 text-success">
+          I took an arrow in the knee aah soundtrack
+        </p>
+        <p class="fs-7 m-2 text-success">
+          OSTs that go harder than they should
+        </p>
+        <p class="fs-7 m-2 text-success">Miku songs that changed my life fr</p>
+        <p class="fs-7 m-2 text-success">
+          Crying in 2008 while listening to world is mine
+        </p>
+        <p class="fs-7 m-2 text-success">
+          Metal songs that make me feel like a villain
+        </p>
+        <p class="fs-7 m-2 text-success">
+          Chill game bgm but it hits different
+        </p>
+        <p class="fs-7 m-2 text-success">
+          Songs that make me wanna run with toast in my mouth
+        </p>
+        <p class="fs-7 m-2 text-success">
+          Anime music but only the most emotional ones
+        </p>
+        <p class="fs-7 m-2 text-success">
+          Gaming music that makes me feel unstoppable
+        </p>
+        <p class="fs-7 m-2 text-success">Minecraft and chill</p>
+        <p class="fs-7 m-2 text-success">Mosh pit anthems for your soul</p>
+        <p class="fs-7 m-2 text-success">
+          Every anime OP is a banger, prove me wrong
+        </p>
+        <p class="fs-7 m-2 text-success">
+          Metal that makes me wanna punch a dragon
+        </p>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="col col-md-8 vh-100">
+      <div class="d-flex justify-content-between">
+        <!-- Precedente e Successivo -->
+        <div>
+          <i class="fas fa-chevron-left"></i>
+          <i class="fas fa-chevron-right"></i>
         </div>
 
-        <!-- Canzone in primo piano -->
-        <div class="row bg-warning mx-4 py-3 d-flex">
-          <div class="col-2 d-flex justify-content-center align-items-center">
-            <img
-              src="./assets/img/main/image-1.jpg"
-              alt="song_cover"
-              class="img-fluid"
-              id="closeAppSongImg"
-            />
-          </div>
-          <div class="col-9 fw-normal position-relative flex-grow-1">
-            <div class="songContainer">
-              <p>ALBUM</p>
-              <h1 class="fw-bold fs-11" id="closeAppSongTitle">
-                NOME ALBUM/CANZONE
-              </h1>
-              <p id="closeAppSongArtist">Nome Artista</p>
-              <p id="closeAppSongNew">Ascolta il nuovo brano di {ARTISTA}</p>
-            </div>
-            <div class="buttonContainer">
-              <button class="btn btn-primary rounded-pill mx-2 p-2 px-4">
-                Play
-              </button>
-              <button class="btn btn-warning border rounded-pill mx-2 p-2 px-4 saveButton">
-                Salva
-              </button>
-              <button class="btn btn-warning rounded-pill mx-2 p-2 px-4 fs-4">
-                <i class="bi bi-three-dots"></i>
-              </button>
-            </div>
-            <button
-              class="btn btn-secodnary text-danger fw-bold position-absolute top-0 end-0 me-3 rounded-4 bg-secondary hide"
-            >
-              NASCONDI ANNUNCI
-            </button>
-          </div>
-        </div>
-
-        <div class="my-5">
-          <!-- Buonasera -->
-          <h2 class="ms-3 fs-1">Buonasera</h2>
-
-          <div class="row d-flex justify-content-around gap-3 m-3">
-            <!-- Canzone o Album 1 -->
-            <div
-              class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0 rounded-1"
-              class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0 rounded-1"
-            >
-              <img
-                src="./assets/img/other/liked songs.png"
-                src="./assets/img/other/liked songs.png"
-                alt="song_cover"
-                class="img-fluid w-20 m-0 rounded-start-2 cursor-pointer"
-                class="img-fluid w-20 m-0 rounded-1"
-              />
-              <p class="ms-3 mb-0 text-start">Brani che ti piacciono</p>
-            </div>
-
-            <!-- Canzone o Album 2 -->
-            <div
-              class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0 rounded-1"
-              class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0 rounded-1"
-            >
-              <img
-                src="./assets/img/main/image-12.jpg"
-                alt="song_cover"
-                class="img-fluid w-20 m-0 rounded-start-2 cursor-pointer"
-                class="img-fluid w-20 m-0 rounded-1"
-              />
-              <p class="ms-3 mb-0 text-start cursor-pointer">
-                Nome Canzone/Album
-              </p>
-            </div>
-
-            <!-- Canzone o Album 3 -->
-            <div
-              class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0 rounded-1"
-              class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0 rounded-1"
-            >
-              <img
-                src="./assets/img/main/image-12.jpg"
-                alt="song_cover"
-                class="img-fluid w-20 m-0 rounded-start-2 cursor-pointer"
-                class="img-fluid w-20 m-0 rounded-1"
-              />
-              <p class="ms-3 mb-0 text-start cursor-pointer">
-                Nome Canzone/Album
-              </p>
-            </div>
-
-            <!-- Canzone o Album 4 -->
-            <div
-              class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0 rounded-1"
-              class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0 rounded-1"
-            >
-              <img
-                src="./assets/img/main/image-12.jpg"
-                alt="song_cover"
-                class="img-fluid w-20 m-0 rounded-start-2 cursor-pointer"
-                class="img-fluid w-20 m-0 rounded-1"
-              />
-              <p class="ms-3 mb-0 text-start cursor-pointer">
-                Nome Canzone/Album
-              </p>
-            </div>
-
-            <!-- Canzone o Album 5 -->
-            <div
-              class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0 rounded-1"
-              class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0 rounded-1"
-            >
-              <img
-                src="./assets/img/main/image-12.jpg"
-                alt="song_cover"
-                class="img-fluid w-20 m-0 rounded-start-2 cursor-pointer"
-                class="img-fluid w-20 m-0 rounded-1"
-              />
-              <p class="ms-3 mb-0 text-start cursor-pointer">
-                Nome Canzone/Album
-              </p>
-            </div>
-
-            <!-- Canzone o Album 6 -->
-            <div
-              class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0 rounded-1"
-              class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0 rounded-1"
-            >
-              <img
-                src="./assets/img/main/image-12.jpg"
-                alt="song_cover"
-                class="img-fluid w-20 m-0 rounded-start-2 cursor-pointer"
-                class="img-fluid w-20 m-0 rounded-1"
-              />
-              <p class="ms-3 mb-0 text-start cursor-pointer">
-                Nome Canzone/Album
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Altro di ciò che ti piace -->
-        <div class="row d-flex justify-content-around gap-3 mb-5 ">
-          <div class="row d-flex justify-content-around mt-5 p-0">
-            <div class="d-flex justify-content-between align-items-center">
-              <h2 class="ms-3 fs-1 mb-2">Altro di ciò che ti piace</h2>
-              <button class="btn text-white">VISUALIZZA TUTTO</button>
-            </div>
-
-            <!-- Card Canzone o Album 1 -->
-            <div
-              class="col col-md-2 d-flex flex-column p-2 bg-secondary rounded-3"
-            >
-              <img
-                src="..."
-                alt="song_cover"
-                class="albumCardImg cursor-pointer rounded-3 m-2"
-              />
-              <div class="container mt-2">
-                <h6 class="albumCardTitle">Titolo Album/canzone</h6>
-                <p class="albumCardArtist">Nome Artista</p>
-              </div>
-            </div>
-
-            <!-- Card Canzone o Album 2 -->
-            <div
-              class="col col-md-2 d-flex flex-column p-2 bg-secondary rounded-3"
-            >
-              <img
-                src="..."
-                alt="song_cover"
-                class="albumCardImg cursor-pointer rounded-3 m-2"
-              />
-              <div class="container mt-2">
-                <h6 class="albumCardTitle">Titolo Album/canzone</h6>
-                <p class="albumCardArtist">Nome Artista</p>
-              </div>
-            </div>
-
-            <!-- Card Canzone o Album 3 -->
-            <div
-              class="col col-md-2 d-flex flex-column p-2 bg-secondary rounded-3"
-            >
-              <img
-                src="..."
-                alt="song_cover"
-                class="albumCardImg cursor-pointer rounded-3 m-2"
-              />
-              <div class="container mt-2">
-                <h6 class="albumCardTitle">Titolo Album/canzone</h6>
-                <p class="albumCardArtist">Nome Artista</p>
-              </div>
-            </div>
-
-            <!-- Card Canzone o Album 4 -->
-            <div
-              class="col col-md-2 d-flex flex-column p-2 bg-secondary rounded-3"
-            >
-              <img
-                src="..."
-                alt="song_cover"
-                class="albumCardImg cursor-pointer rounded-3 m-2"
-              />
-              <div class="container mt-2">
-                <h6 class="albumCardTitle">Titolo Album/canzone</h6>
-                <p class="albumCardArtist">Nome Artista</p>
-              </div>
-            </div>
-
-            <!-- Card Canzone o Album 5 -->
-            <div
-              class="col col-md-2 d-flex flex-column p-2 bg-secondary rounded-3"
-            >
-              <img
-                src="..."
-                alt="song_cover"
-                class="albumCardImg cursor-pointer rounded-3 m-2"
-              />
-              <div class="container mt-2">
-                <h6 class="albumCardTitle">Titolo Album/canzone</h6>
-                <p class="albumCardArtist">Nome Artista</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-
-      <!-- Playbar -->
-      <div
-        class="w-100 fixed-bottom d-flex justify-content-between bg-secondary p-2 px-4 align-items-center border-top border-danger"
-      >
-        <!-- Brano in Corso -->
-        <div class="d-flex align-items-center text-white">
-          <img
-            src="..."
-            alt="song_cover"
-            class="rounded-3 actualSong"
-            id="playbarCloseAppSongImg"
-          />
-          <div class="ms-3">
-            <h6 class="mb-0 fs-6 fw-bold" id="playbarCloseAppSongTitle">Nome Brano</h6>
-            <p class="mb-0 fs-8" id="playbarCloseAppSongArtist">Nome Artista</p>
-          </div>
-          <i class="bi bi-heart ms-4 fs-5" id="likeSong"></i>
-        </div>
-
-        <!-- Play Buttons -->
-        <div class="d-flex flex-column align-items-center flex-grow-1">
-          <div class="d-flex justify-content-center mb-2">
-            <button class=" text-white fs-4 playbarButton" id="shuffleButton">
-              <i class="bi bi-shuffle"></i>
-            </button>
-
-            <button class="text-white fs-4 playbarButton" id="backwardButton">
-              <i class="fas fa-step-backward"></i>
-            </button>
-
-            <button
-              class=" playbarButton text-decoration-none fs-3 bg-white "
-              id="playButton"
-            >
-              <i class="bi bi-play-fill text-black"></i>
-            </button>
-
-            <button class="text-white fs-4 playbarButton" id="forwardButton">
-              <i class="fas fa-step-forward"></i>
-            </button>
-
-            <button class="text-white fs-4 playbarButton" id="loopButton">
-              <i class="fas fa-retweet"></i>
-            </button>
-          </div>
-
-          <!-- Progression Bar -->
-          <div
-            class="ms-3 text-white d-flex justify-content-center align-items-center w-50 px-5"
+        <!-- User Dropdown Menu -->
+        <div class="dropdown">
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
           >
-            <p class="mb-0 fs-8 mx-3" id="timePast">00:30</p>
-            <div class="w-100">
-              <div
-                class="progress bg-danger progressionBar"
-                role="progressbar"
-                aria-label="Progress"
-                aria-valuenow="25"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                <div class="progress-bar" style="width: 25%"></div>
-              </div>
-            </div>
-            <p class="mb-0 fs-8 mx-3" id="timeRemaining ">03:00</p>
-          </div>
+            <img
+              src="./assets/img/users/user-1.png"
+              alt="user_img"
+              class="rounded-circle userImg"
+            />
+            Marcello Miranda ...
+          </button>
+          <ul class="dropdown-menu bg-secondary border border-1">
+            <li><a class="dropdown-item text-white" href="#">Account</a></li>
+            <li><a class="dropdown-item text-white" href="#">Settings</a></li>
+            <li><a class="dropdown-item text-white" href="#">Logout</a></li>
+          </ul>
         </div>
+      </div>
 
-        <!-- Volume and Widgets -->
-        <div class="d-flex align-items-center">
-          <button class="btn text-white fs-5 widgetsButton">
-            <i class="fas fa-microphone"></i>
-          </button>
-          <button class="btn text-white fs-5 widgetsButton">
-            <i class="fas fa-stream"></i>
-          </button>
-          <button class="btn text-white fs-5 widgetsButton">
-            <i class="bi bi-speaker"></i>
-          </button>
-          <button class="btn text-white fs-3">
-            <i class="bi bi-volume-down"></i>
-          </button>
-          <input type="range" class="volumeControl">
-          <button class="btn btn-link text-white fs-6">
-            <i class="bi bi-arrows-angle-expand" id="enlargeReduce"></i>
+      <!-- Canzone in primo piano -->
+      <div class="row bg-warning mx-4 py-3 d-flex">
+        <div class="col-2 d-flex justify-content-center align-items-center">
+          <img
+            src="./assets/img/main/image-1.jpg"
+            alt="song_cover"
+            class="img-fluid"
+            id="closeAppSongImg"
+          />
+        </div>
+        <div class="col-9 fw-normal position-relative flex-grow-1">
+          <div class="songContainer">
+            <p>ALBUM</p>
+            <h1 class="fw-bold fs-11" id="closeAppSongTitle">
+              NOME ALBUM/CANZONE
+            </h1>
+            <p id="closeAppSongArtist">Nome Artista</p>
+            <p id="closeAppSongNew">Ascolta il nuovo brano di {ARTISTA}</p>
+          </div>
+          <div class="buttonContainer">
+            <button class="btn btn-primary rounded-pill mx-2 p-2 px-4">
+              Play
+            </button>
+            <button
+              class="btn btn-warning border rounded-pill mx-2 p-2 px-4 saveButton"
+            >
+              Salva
+            </button>
+            <button class="btn btn-warning rounded-pill mx-2 p-2 px-4 fs-4">
+              <i class="bi bi-three-dots"></i>
+            </button>
+          </div>
+          <button
+            class="btn btn-secodnary text-danger fw-bold position-absolute top-0 end-0 me-3 rounded-4 bg-secondary hide"
+          >
+            NASCONDI ANNUNCI
           </button>
         </div>
       </div>
 
-      <!-- Side Bar DX -->
-      <aside class="col col-md-2 d-flex flex-column bg-black">
-        <div class="d-flex justify-content-between align-items-center p-1">
-      <aside class="col col-md-1 d-flex flex-column bg-black d-none d-md-block">
-        <div class="d-flex justify-content-between p-1">
-          <h5 class="fw-bold m-2 fs-6">Attività Amici</h5>
-          <div><i class="bi bi-person-add"></i> <i class="bi bi-x-lg"></i></div>
-        </div>
-        <div class="d-flex flex-column m-2">
-          <!-- User 1 -->
-          <section class="d-flex align-items-top justify-content-between my-2">
-            <img
-              src="/assets/img/users/user-2.jpg"
-              alt="user_img"
-              class="rounded-circle userImg me-2"
-              style="width: 30px; height: 30px"
-            />
-            <div class="flex-grow-1">
-              <h5 class="fs-6 fw-bold mb-0 text-success">Angelo Zorzi</h5>
-              <p class="fs-8 mb-0 text-success fw-light">
-                In Camera &bull; Yumi Zouma
-              </p>
-              <p class="fs-8 mb-0 text-success">
-                <i class="bi bi-stop-circle text-success"></i> EP III
-              </p>
-            </div>
-            <p class="fs-8 mb-0 text-success">4 ore</p>
-          </section>
+      <div class="my-5">
+        <!-- Buonasera -->
+        <h2 class="ms-3 fs-1">Buonasera</h2>
 
-          <!-- User 2 -->
-          <section class="d-flex align-items-top justify-content-between my-2">
+        <div class="row d-flex justify-content-around gap-3 m-3">
+          <!-- Canzone o Album 1 -->
+          <div
+            class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0 rounded-1"
+            class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0 rounded-1"
+          >
             <img
-              src="/assets/img/users/user-3.jpg"
-              alt="user_img"
-              class="rounded rounded-circle userImg me-2"
-              style="width: 30px; height: 30px"
+              src="./assets/img/other/liked songs.png"
+              src="./assets/img/other/liked songs.png"
+              alt="song_cover"
+              class="img-fluid w-20 m-0 rounded-start-2 cursor-pointer"
+              class="img-fluid w-20 m-0 rounded-1"
             />
-            <div class="flex-grow-1">
-              <h5 class="fs-6 fw-bold mb-0 text-success">
-                Lucrezia Martinelli
-              </h5>
-              <p class="fs-8 mb-0 text-success fw-light">
-                Aimed to Kill &bull; Jade Lemac
-              </p>
-              <p class="fs-8 mb-0 text-success">
-                <i class="bi bi-stop-circle text-success"></i> Aimed to Kill
-              </p>
-            </div>
-            <p class="fs-8 mb-0 text-success">8 ore</p>
-          </section>
+            <p class="ms-3 mb-0 text-start">Brani che ti piacciono</p>
+          </div>
 
-          <!-- User 3 -->
-          <section class="d-flex align-items-top justify-content-between my-2">
+          <!-- Canzone o Album 2 -->
+          <div
+            class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0 rounded-1"
+            class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0 rounded-1"
+          >
             <img
-              src="/assets/img/users/user-4.jpg"
-              alt="user_img"
-              class="rounded rounded-circle userImg me-2"
-              style="width: 30px; height: 30px"
+              src="./assets/img/main/image-12.jpg"
+              alt="song_cover"
+              class="img-fluid w-20 m-0 rounded-start-2 cursor-pointer"
+              class="img-fluid w-20 m-0 rounded-1"
             />
-            <div class="flex-grow-1">
-              <h5 class="fs-6 fw-bold mb-0 text-success">
-                Marco Teodoro Mancuso
-              </h5>
-              <p class="fs-8 mb-0 text-success fw-light">
-                New Kings &bull; Sleeping Wolf
-              </p>
-              <p class="fs-8 mb-0 text-success">
-                <i class="bi bi-music-note-beamed text-success"></i> Twint
-                Badass Mood
-              </p>
-            </div>
-            <p class="fs-8 mb-0 text-success">3 giorni</p>
-          </section>
+            <p class="ms-3 mb-0 text-start cursor-pointer">
+              Nome Canzone/Album
+            </p>
+          </div>
+
+          <!-- Canzone o Album 3 -->
+          <div
+            class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0 rounded-1"
+            class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0 rounded-1"
+          >
+            <img
+              src="./assets/img/main/image-12.jpg"
+              alt="song_cover"
+              class="img-fluid w-20 m-0 rounded-start-2 cursor-pointer"
+              class="img-fluid w-20 m-0 rounded-1"
+            />
+            <p class="ms-3 mb-0 text-start cursor-pointer">
+              Nome Canzone/Album
+            </p>
+          </div>
+
+          <!-- Canzone o Album 4 -->
+          <div
+            class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0 rounded-1"
+            class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0 rounded-1"
+          >
+            <img
+              src="./assets/img/main/image-12.jpg"
+              alt="song_cover"
+              class="img-fluid w-20 m-0 rounded-start-2 cursor-pointer"
+              class="img-fluid w-20 m-0 rounded-1"
+            />
+            <p class="ms-3 mb-0 text-start cursor-pointer">
+              Nome Canzone/Album
+            </p>
+          </div>
+
+          <!-- Canzone o Album 5 -->
+          <div
+            class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0 rounded-1"
+            class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0 rounded-1"
+          >
+            <img
+              src="./assets/img/main/image-12.jpg"
+              alt="song_cover"
+              class="img-fluid w-20 m-0 rounded-start-2 cursor-pointer"
+              class="img-fluid w-20 m-0 rounded-1"
+            />
+            <p class="ms-3 mb-0 text-start cursor-pointer">
+              Nome Canzone/Album
+            </p>
+          </div>
+
+          <!-- Canzone o Album 6 -->
+          <div
+            class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0 rounded-1"
+            class="col-md-3 bg-danger flex-grow-1 d-flex align-items-center p-0 rounded-1"
+          >
+            <img
+              src="./assets/img/main/image-12.jpg"
+              alt="song_cover"
+              class="img-fluid w-20 m-0 rounded-start-2 cursor-pointer"
+              class="img-fluid w-20 m-0 rounded-1"
+            />
+            <p class="ms-3 mb-0 text-start cursor-pointer">
+              Nome Canzone/Album
+            </p>
+          </div>
         </div>
-      </aside>
+      </div>
+
+      <!-- Altro di ciò che ti piace -->
+      <div class="row d-flex justify-content-around gap-3 mb-5">
+        <div class="row d-flex justify-content-around mt-5 p-0">
+          <div class="d-flex justify-content-between align-items-center">
+            <h2 class="ms-3 fs-1 mb-2">Altro di ciò che ti piace</h2>
+            <button class="btn text-white">VISUALIZZA TUTTO</button>
+          </div>
+
+          <!-- Card Canzone o Album 1 -->
+          <div
+            class="col col-md-2 d-flex flex-column p-2 bg-secondary rounded-3"
+          >
+            <img
+              src="..."
+              alt="song_cover"
+              class="albumCardImg cursor-pointer rounded-3 m-2"
+            />
+            <div class="container mt-2">
+              <h6 class="albumCardTitle">Titolo Album/canzone</h6>
+              <p class="albumCardArtist">Nome Artista</p>
+            </div>
+          </div>
+
+          <!-- Card Canzone o Album 2 -->
+          <div
+            class="col col-md-2 d-flex flex-column p-2 bg-secondary rounded-3"
+          >
+            <img
+              src="..."
+              alt="song_cover"
+              class="albumCardImg cursor-pointer rounded-3 m-2"
+            />
+            <div class="container mt-2">
+              <h6 class="albumCardTitle">Titolo Album/canzone</h6>
+              <p class="albumCardArtist">Nome Artista</p>
+            </div>
+          </div>
+
+          <!-- Card Canzone o Album 3 -->
+          <div
+            class="col col-md-2 d-flex flex-column p-2 bg-secondary rounded-3"
+          >
+            <img
+              src="..."
+              alt="song_cover"
+              class="albumCardImg cursor-pointer rounded-3 m-2"
+            />
+            <div class="container mt-2">
+              <h6 class="albumCardTitle">Titolo Album/canzone</h6>
+              <p class="albumCardArtist">Nome Artista</p>
+            </div>
+          </div>
+
+          <!-- Card Canzone o Album 4 -->
+          <div
+            class="col col-md-2 d-flex flex-column p-2 bg-secondary rounded-3"
+          >
+            <img
+              src="..."
+              alt="song_cover"
+              class="albumCardImg cursor-pointer rounded-3 m-2"
+            />
+            <div class="container mt-2">
+              <h6 class="albumCardTitle">Titolo Album/canzone</h6>
+              <p class="albumCardArtist">Nome Artista</p>
+            </div>
+          </div>
+
+          <!-- Card Canzone o Album 5 -->
+          <div
+            class="col col-md-2 d-flex flex-column p-2 bg-secondary rounded-3"
+          >
+            <img
+              src="..."
+              alt="song_cover"
+              class="albumCardImg cursor-pointer rounded-3 m-2"
+            />
+            <div class="container mt-2">
+              <h6 class="albumCardTitle">Titolo Album/canzone</h6>
+              <p class="albumCardArtist">Nome Artista</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Playbar -->
+    <div
+      class="w-100 fixed-bottom d-flex justify-content-between bg-secondary p-2 px-4 align-items-center border-top border-danger"
+    >
+      <!-- Brano in Corso -->
+      <div class="d-flex align-items-center text-white">
+        <img
+          src="..."
+          alt="song_cover"
+          class="rounded-3 actualSong"
+          id="playbarCloseAppSongImg"
+        />
+        <div class="ms-3">
+          <h6 class="mb-0 fs-6 fw-bold" id="playbarCloseAppSongTitle">
+            Nome Brano
+          </h6>
+          <p class="mb-0 fs-8" id="playbarCloseAppSongArtist">Nome Artista</p>
+        </div>
+        <i class="bi bi-heart ms-4 fs-5" id="likeSong"></i>
+      </div>
+
+      <!-- Play Buttons -->
+      <div class="d-flex flex-column align-items-center flex-grow-1">
+        <div class="d-flex justify-content-center mb-2">
+          <button class="text-white fs-4 playbarButton" id="shuffleButton">
+            <i class="bi bi-shuffle"></i>
+          </button>
+
+          <button class="text-white fs-4 playbarButton" id="backwardButton">
+            <i class="fas fa-step-backward"></i>
+          </button>
+
+          <button
+            class="playbarButton text-decoration-none fs-3 bg-white"
+            id="playButton"
+          >
+            <i class="bi bi-play-fill text-black"></i>
+          </button>
+
+          <button class="text-white fs-4 playbarButton" id="forwardButton">
+            <i class="fas fa-step-forward"></i>
+          </button>
+
+          <button class="text-white fs-4 playbarButton" id="loopButton">
+            <i class="fas fa-retweet"></i>
+          </button>
+        </div>
+
+        <!-- Progression Bar -->
+        <div
+          class="ms-3 text-white d-flex justify-content-center align-items-center w-50 px-5"
+        >
+          <p class="mb-0 fs-8 mx-3" id="timePast">00:30</p>
+          <div class="w-100">
+            <div
+              class="progress bg-danger progressionBar"
+              role="progressbar"
+              aria-label="Progress"
+              aria-valuenow="25"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            >
+              <div class="progress-bar" style="width: 25%"></div>
+            </div>
+          </div>
+          <p class="mb-0 fs-8 mx-3" id="timeRemaining ">03:00</p>
+        </div>
+      </div>
+
+      <!-- Volume and Widgets -->
+      <div class="d-flex align-items-center">
+        <button class="btn text-white fs-5 widgetsButton">
+          <i class="fas fa-microphone"></i>
+        </button>
+        <button class="btn text-white fs-5 widgetsButton">
+          <i class="fas fa-stream"></i>
+        </button>
+        <button class="btn text-white fs-5 widgetsButton">
+          <i class="bi bi-speaker"></i>
+        </button>
+        <button class="btn text-white fs-3">
+          <i class="bi bi-volume-down"></i>
+        </button>
+        <input type="range" class="volumeControl" />
+        <button class="btn btn-link text-white fs-6">
+          <i class="bi bi-arrows-angle-expand" id="enlargeReduce"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Side Bar DX -->
+    <aside class="col col-md-2 d-flex flex-column bg-black">
+      <div class="d-flex justify-content-between align-items-center p-1">
+        <h5 class="fw-bold m-2 fs-6">Attività Amici</h5>
+        <div><i class="bi bi-person-add"></i> <i class="bi bi-x-lg"></i></div>
+      </div>
+      <div class="d-flex flex-column m-1">
+        <!-- Amico 1 -->
+        <section class="d-flex position-relative mb-3">
+          <img
+            src="./assets/img/users/user-2.jpg"
+            alt="user_img"
+            class="rounded rounded-circle userImg"
+          />
+          <div class="flex-column ms-1">
+            <h5 class="fs-6 fw-bold">Angelo Zorzi</h5>
+            <p class="fs-8">In Camera &bull; Yumi Zouma</p>
+            <p class="fs-9"><i class="bi bi-stop-circle"></i> EP III</p>
+            <p class="fs-8 userTime">4 ore</p>
+          </div>
+        </section>
+
+        <!-- Amico 2 -->
+        <section class="d-flex position-relative mb-3">
+          <img
+            src="./assets/img/users/user-3.jpg"
+            alt="user_img"
+            class="rounded rounded-circle userImg"
+          />
+          <div class="flex-column ms-2">
+            <h5 class="fs-6 fw-bold">Lucrezia Martinelli</h5>
+            <p class="fs-8">Aimed to Kill &bull; Jade Lemac</p>
+            <p class="fs-9"><i class="bi bi-stop-circle"></i> Aimed to Kill</p>
+            <p class="fs-8 userTime">8 ore</p>
+          </div>
+        </section>
+
+        <!-- Amico 3 -->
+        <section class="d-flex position-relative mb-3">
+          <img
+            src="./assets/img/users/user-4.jpg"
+            alt="user_img"
+            class="rounded rounded-circle userImg"
+          />
+          <div class="flex-column ms-2">
+            <h5 class="fs-6 fw-bold">Marco Teodoro Mancuso</h5>
+            <p class="fs-8">New Kings &bull; Sleeping Wolf</p>
+            <p class="fs-9">
+              <i class="bi bi-stop-circle"></i> Twint Badass Mood
+            </p>
+            <p class="fs-8 userTime">3 giorni</p>
+          </div>
+        </section>
+      </div>
+    </aside>
 
     <!-- Bootstrap JS -->
     <script
@@ -566,6 +545,6 @@
     <script src="./assets/js/home-page.js"></script>
 
     <!-- Playbar JS -->
-     <script src="./assets/js/playbar.js"></script>
+    <script src="./assets/js/playbar.js"></script>
   </body>
 </html>
