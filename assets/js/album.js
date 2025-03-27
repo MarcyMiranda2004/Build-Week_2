@@ -25,8 +25,15 @@ const apiLink = `https://striveschool-api.herokuapp.com/api/deezer/album/${album
         const singerImg = document.getElementById("singer-img")
         const albumData = document.getElementById("dati-album")
         const albumName = document.getElementById("album-name")
+        const playBarImg = document.getElementById("playbarCloseAppSongImg")
+        const playBarTilte = document.getElementById("playbarCloseAppSongTitle")
+        const playbarSongArtist = document.getElementById("playbarCloseAppSongArtist")
+
+        playBarImg.src = data.cover
         singerImg.src = data.artist.picture
         imgAlbum.src = data.cover
+        playBarTilte.innerHTML = `${data.tracks.data[0].title}`
+        playbarSongArtist.innerHTML = `${data.artist.name}`
         imgAlbum.width = 120
         imgAlbum.height = 120
         albumData.innerHTML =`${data.artist.name} - ${data.release_date} - ${data.nb_tracks} - ${(data.duration / 60).toFixed(2)}`
