@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
           albumCardTitle[i].innerText = data.title;
           albumCardArtist[
             i
-          ].innerHTML = `<a href="/assets/html/artista.html?id=${data.artist.id}">${data.artist.name}</a>`;
+          ].innerHTML = `<a href="/artista.html?id=${data.artist.id}">${data.artist.name}</a>`;
         }
       })
       .catch((error) => console.error("Errore nel recupero dati:", error));
