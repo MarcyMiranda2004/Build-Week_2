@@ -24,6 +24,8 @@ const getArtist = function (artistID) {
         "artist-listeners"
       ).innerText = `${data.nb_fan.toLocaleString()} ascoltatori mensili`;
       const roundedArtist = document.getElementById("roundedArtist");
+      const artistLike = document.getElementById("artistLike");
+      artistLike.innerHTML = `di ${data.name}`;
       roundedArtist.src = `${data.picture_xl}`;
       roundedArtist.style.width = "40px";
     })
