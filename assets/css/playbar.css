@@ -82,7 +82,7 @@
 /* ---------- Widgets ---------- */
 
 /* Volume */
-.volumeControl {
+#playbarDesktop .volumeControl {
   -webkit-appearance: none;
   appearance: none;
   width: 30%;
@@ -90,15 +90,24 @@
   border-radius: 5px;
   outline: none;
   padding: 0 2px;
+  background: #ddd;
+  position: relative;
 }
 
-.volumeControl::-webkit-slider-runnable-track {
+#playbarDesktop .volumeControl::-webkit-slider-runnable-track {
   background: #ddd;
   height: 6px;
   border-radius: 5px;
 }
-
-.volumeControl::-webkit-slider-thumb {
+#playbarDesktop .volumeControl {
+  background: linear-gradient(
+    to right,
+    #1db954 var(--volume-level, 0%),
+    #ddd var(--volume-level, 0%),
+    #ddd 100%
+  );
+}
+#playbarDesktop .volumeControl::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 8px;
@@ -108,13 +117,19 @@
   border-radius: 50%;
   margin-top: -1px;
   transform: scale(1);
+  position: relative;
+  z-index: 2;
 }
 
-/* Karaoke Button*/
-.widgetsButton {
-  background-color: transparent;
-  border: none;
-  margin: 0 5px;
-  padding: 5px;
-  position: relative;
+#playbarDesktop .volumeControl::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 6px;
+  background: #1db954;
+  border-radius: 5px;
+  width: var(--volume-level, 50%);
+  transform: translateY(-50%);
+  z-index: 1;
 }

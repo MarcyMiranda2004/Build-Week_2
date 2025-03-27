@@ -57,7 +57,13 @@ const addToFavorite = () => {
 };
 
 addToFavorite();
+//Aggiorna dinamicamente barra volume//
+const volumeControl = document.querySelector("#playbarDesktop .volumeControl");
 
+volumeControl.addEventListener("input", function () {
+  const volume = this.value; // Ottiene il valore corrente del volume
+  this.style.setProperty("--volume-level", `${volume}%`);
+});
 // Enlarge - Reduce
 const enlargeReduce = () => {
   const enlargeReduce = document.getElementById("enlargeReduce");

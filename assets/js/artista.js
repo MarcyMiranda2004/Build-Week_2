@@ -19,17 +19,13 @@ const getArtist = function (artistID) {
         height: 300px;
         width: 100%;
       `;
-
       document.getElementById("artist-name").innerText = data.name;
       document.getElementById(
         "artist-listeners"
       ).innerText = `${data.nb_fan.toLocaleString()} ascoltatori mensili`;
       const roundedArtist = document.getElementById("roundedArtist");
-
       roundedArtist.src = `${data.picture_xl}`;
       roundedArtist.style.width = "40px";
-      const artistLike = document.getElementById("artistLike");
-      artistLike.innerHTML = `di ${data.name}`;
     })
     .catch((err) => console.log("ERROR:", err));
 };
@@ -184,6 +180,7 @@ if (!artistID) {
       toggleExtraTracks(artistID);
     });
 }
+// Event delegation sui due contenitori delle tracce
 
 document
   .getElementById("popular-tracks-list")
@@ -212,27 +209,35 @@ function handleTrackClick(e) {
 }
 
 const fillPlaybar = (title, artist, imgSrc) => {
+  // Elementi playbar desktop
   const playbarTitle = document.getElementById("playbarCloseAppSongTitle");
   const playbarArtist = document.getElementById("playbarCloseAppSongArtist");
-  const playbarImg = document.getElementById("playbarCloseAppSongImg");
+  const playbarDesktopImg = document.querySelector(".actualSong"); // Selettore corretto per l'immagine desktop
 
-  playbarTitle.innerText = title;
-  playbarArtist.innerText = artist;
-  playbarImg.src = imgSrc;
+  // Elementi playbar mobile
+  const playbarMobileImg = document.querySelector(
+    "#playbarMobile .playbar-song-img"
+  );
 
-  // Applica troncamento con ellipsis per titoli troppo lunghi
-  playbarTitle.style.whiteSpace = "nowrap";
-  playbarTitle.style.overflow = "hidden";
-  playbarTitle.style.textOverflow = "ellipsis";
-  playbarTitle.style.maxWidth = "150px";
-  playbarTitle.style.display = "inline-block";
+  // Aggiorna la playbar desktop
+  if (playbarTitle) playbarTitle.innerText = title;
+  if (playbarArtist) playbarArtist.innerText = artist;
+  if (playbarDesktopImg) playbarDesktopImg.src = imgSrc; // Aggiorna l'immagine desktop
 
-  // Mostra la playbar se nascosta
-  //const playbar = document.querySelector(".fixed-bottom");
-  //playbar.classList.remove("d-none");
+  // Aggiorna la playbar mobile
+  if (playbarMobileImg) playbarMobileImg.src = imgSrc;
+
+  // Troncamento del titolo (solo per la versione desktop)
+  if (playbarTitle) {
+    playbarTitle.style.whiteSpace = "nowrap";
+    playbarTitle.style.overflow = "hidden";
+    playbarTitle.style.textOverflow = "ellipsis";
+    playbarTitle.style.maxWidth = "150px";
+    playbarTitle.style.display = "inline-block";
+  }
 };
 
-// Gestione della progress bar dinamica
+// Gestione della progress bar dinamica (bonus)
 let progress = 0;
 const progressBar = document.querySelector(".progress-bar");
 
@@ -263,6 +268,20 @@ const addToFavorite = () => {
 };
 
 addToFavorite();
+//Aggiorna dinamicamente barra volume//
+const volumeControl = document.querySelector("#playbarMobile .volumeControl");
+
+volumeControl.addEventListener("input", function () {
+  const volume = this.value; // Ottiene il valore corrente del volume
+  this.style.setProperty("--volume-level", `${volume}%`);
+});
+//Aggiorna dinamicamente barra volume//
+const volumeControl1 = document.querySelector("#playbarDesktop .volumeControl");
+
+volumeControl1.addEventListener("input", function () {
+  const volume = this.value; // Ottiene il valore corrente del volume
+  this.style.setProperty("--volume-level", `${volume}%`);
+});
 // Enlarge - Reduce
 const enlargeReduce = () => {
   const enlargeReduce = document.getElementById("enlargeReduce");
