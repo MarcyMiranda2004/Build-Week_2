@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return response.json();
       })
       .then((data) => {
-        console.log("Data ricevuta:", data);
+        console.log("Data:", data);
 
         if (albumCardTitle[i]) {
           albumCardImg[i].src = data.cover_medium;
