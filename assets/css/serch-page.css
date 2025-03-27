@@ -1,3 +1,24 @@
+main {
+  overflow: auto;
+}
+
+main::-webkit-scrollbar {
+  width: 10px;
+}
+
+main::-webkit-scrollbar-track {
+  background: black;
+}
+
+main::-webkit-scrollbar-thumb {
+  background: rgb(53, 53, 53);
+  border-radius: 10px;
+}
+
+main::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
+
 .searchCamp {
   width: 50%;
   border: 1px solid rgba(128, 128, 128, 0.522) !important;
