@@ -19,13 +19,17 @@ const getArtist = function (artistID) {
         height: 300px;
         width: 100%;
       `;
+
       document.getElementById("artist-name").innerText = data.name;
       document.getElementById(
         "artist-listeners"
       ).innerText = `${data.nb_fan.toLocaleString()} ascoltatori mensili`;
       const roundedArtist = document.getElementById("roundedArtist");
+
       roundedArtist.src = `${data.picture_xl}`;
       roundedArtist.style.width = "40px";
+      const artistLike = document.getElementById("artistLike");
+      artistLike.innerHTML = `di ${data.name}`;
     })
     .catch((err) => console.log("ERROR:", err));
 };
@@ -180,7 +184,6 @@ if (!artistID) {
       toggleExtraTracks(artistID);
     });
 }
-// Event delegation sui due contenitori delle tracce
 
 document
   .getElementById("popular-tracks-list")
@@ -225,11 +228,11 @@ const fillPlaybar = (title, artist, imgSrc) => {
   playbarTitle.style.display = "inline-block";
 
   // Mostra la playbar se nascosta
-  const playbar = document.querySelector(".fixed-bottom");
-  playbar.classList.remove("d-none");
+  //const playbar = document.querySelector(".fixed-bottom");
+  //playbar.classList.remove("d-none");
 };
 
-// Gestione della progress bar dinamica (bonus)
+// Gestione della progress bar dinamica
 let progress = 0;
 const progressBar = document.querySelector(".progress-bar");
 
