@@ -11,3 +11,9 @@
   background-color: #149643;
   color: black;
 }
+
+#resultsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
