@@ -49,6 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
         resultItem.innerHTML = `
+        
         <img
           src="${track.album.cover_medium}"
           alt="song_cover"
@@ -56,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
         />
         <div class="container mt-2">
           <h6 class="albumCardTitle">${track.title}</h6>
-          <p class="albumCardArtist">${track.artist.name}</p>
+          <p class="albumCardArtist"><a href="/artista.html?id=${track.artist.id}">${track.artist.name}</a></p>
         </div>
       `;
 
