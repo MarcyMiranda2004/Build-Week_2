@@ -1,0 +1,100 @@
+#playbarMobile {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.8),
+    rgba(30, 30, 30, 0.7)
+  ); /* Gradiente con maggiore trasparenza */
+  padding: 8px 16px;
+  border-top: 1px solid #e60000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 90%; /* Riduce la larghezza */
+  left: 5%; /* Centra la playbar orizzontalmente */
+  border-radius: 10px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(8px); /* Effetto sfocatura */
+}
+
+#playbarMobile .playbar-song-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 4px;
+}
+
+#playbarMobile .playbarButton i {
+  vertical-align: middle; /* Allinea verticalmente le icone */
+  font-size: 1.2rem; /* Riduce leggermente la dimensione delle icone */
+}
+
+#playbarMobile .playbarButton {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  padding: 0 8px;
+}
+
+#playbarMobile .progressionBar {
+  height: 4px;
+  background-color: #535353;
+  border-radius: 2px;
+}
+
+#playbarMobile .progress-bar {
+  background: linear-gradient(
+    to right,
+    #1db954,
+    #0f8a4b
+  ); /* Gradiente verde Spotify */
+}
+
+#playbarMobile .volumeControl {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 30%;
+  height: 10px;
+  border-radius: 5px;
+  outline: none;
+  padding: 0 2px;
+  background: #ddd;
+  position: relative;
+}
+
+#playbarMobile .volumeControl::-webkit-slider-runnable-track {
+  background: #ddd;
+  height: 6px;
+  border-radius: 5px;
+}
+#playbarMobile .volumeControl {
+  background: linear-gradient(
+    to right,
+    #1db954 var(--volume-level, 0%),
+    #ddd var(--volume-level, 0%),
+    #ddd 100%
+  );
+}
+#playbarMobile .volumeControl::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 8px;
+  height: 8px;
+  background: #149643;
+  cursor: pointer;
+  border-radius: 50%;
+  margin-top: -1px;
+  transform: scale(1);
+  position: relative;
+  z-index: 2;
+}
+
+#playbarMobile .volumeControl::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 6px;
+  background: #1db954;
+  border-radius: 5px;
+  width: var(--volume-level, 50%);
+  transform: translateY(-50%);
+  z-index: 1;
+}
