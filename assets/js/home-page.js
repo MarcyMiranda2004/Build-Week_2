@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const albumCardTitle = document.getElementsByClassName("albumCardTitle");
     const albumCardImg = document.getElementsByClassName("albumCardImg");
     const albumCardArtist = document.getElementsByClassName("albumCardArtist");
-
+    const albumCardHref = document.getElementsByClassName("albumCardHref")
     fetch(albumURL)
       .then((response) => {
         if (!response.ok) {
@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (albumCardTitle[i]) {
           albumCardImg[i].src = data.cover_medium;
+          albumCardHref[i].href= "/album-page.html?album-id=" + id
           albumCardTitle[i].innerText = data.title;
           albumCardArtist[
             i
