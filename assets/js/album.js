@@ -1,9 +1,10 @@
 // const apiLink = `https://striveschool-api.herokuapp.com/api/deezer/album/${albumID}`
 // const apiLinkTest = "https://striveschool-api.herokuapp.com/api/deezer/album/75621062"
 
-const songImport = function (albumID) {
-    
-const apiLink = `https://striveschool-api.herokuapp.com/api/deezer/album/288645872`
+const songImport = function () {
+    let params = new URLSearchParams(document.location.search)
+    let albumID = params.get("album-id")
+const apiLink = `https://striveschool-api.herokuapp.com/api/deezer/album/${albumID}`
     fetch(apiLink,{
         headers:{
             "Content-Type": "application/json",
