@@ -40,6 +40,14 @@ document.addEventListener("DOMContentLoaded", () => {
       .catch((error) => console.error("Errore nel recupero dati:", error));
   });
 
+  //Playbar Mobile aggiornamento volume x Homepage//
+  const volumeControl = document.querySelector("#playbarMobile .volumeControl");
+
+  volumeControl.addEventListener("input", function () {
+    const volume = this.value; // Ottiene il valore corrente del volume
+    this.style.setProperty("--volume-level", `${volume}%`);
+  });
+
   // Canzone in Primo Piano
   const closeAppSongId = "476910655"; // Specialz
   const closeAppSongURL = `https://striveschool-api.herokuapp.com/api/deezer/album/${closeAppSongId}`;
@@ -91,12 +99,4 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   closeAppSong();
-});
-
-//Playbar Mobile aggiornamento volume x Homepage//
-const volumeControl = document.querySelector("#playbarMobile .volumeControl");
-
-volumeControl.addEventListener("input", function () {
-  const volume = this.value; // Ottiene il valore corrente del volume
-  this.style.setProperty("--volume-level", `${volume}%`);
 });
