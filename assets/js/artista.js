@@ -65,10 +65,8 @@ const getPopularTracks = function (artistID) {
           <div class="flex-grow-1">
             <h5 class="mb-1 track-title">${track.title}</h5>
             <div class="d-flex justify-content-md-between justify-content-sm-start gap-4">
-              <p class="mb-0 text-secondary">Ascolti: ${track.rank.toLocaleString()}</p>
-              <p class="mb-0 text-secondary">${formatDuration(
-                track.duration
-              )}</p>
+              <p class="mb-0 text-white">Ascolti: ${track.rank.toLocaleString()}</p>
+              <p class="mb-0 text-white">${formatDuration(track.duration)}</p>
             </div>
           </div>
         </div>
@@ -114,10 +112,8 @@ const getExtraTracks = function (artistID) {
           <div class="flex-grow-1">
             <h5 class="mb-1 track-title">${track.title}</h5>
             <div class="d-flex justify-content-md-between justify-content-sm-start gap-4">
-              <p class="mb-0 text-secondary">Ascolti: ${track.rank.toLocaleString()}</p>
-              <p class="mb-0 text-secondary">${formatDuration(
-                track.duration
-              )}</p>
+              <p class="mb-0 text-white">Ascolti: ${track.rank.toLocaleString()}</p>
+              <p class="mb-0 text-white">${formatDuration(track.duration)}</p>
             </div>
           </div>
         </div>
@@ -128,7 +124,6 @@ const getExtraTracks = function (artistID) {
     .catch((err) => console.error("ERROR:", err));
 };
 
-// Formatta la durata mm:ss
 const formatDuration = (duration) => {
   const minutes = Math.floor(duration / 60);
   const seconds = duration % 60;
@@ -209,25 +204,20 @@ function handleTrackClick(e) {
 }
 
 const fillPlaybar = (title, artist, imgSrc) => {
-  // Elementi playbar desktop
   const playbarTitle = document.getElementById("playbarCloseAppSongTitle");
   const playbarArtist = document.getElementById("playbarCloseAppSongArtist");
-  const playbarDesktopImg = document.querySelector(".actualSong"); // Selettore corretto per l'immagine desktop
+  const playbarDesktopImg = document.querySelector(".actualSong");
 
-  // Elementi playbar mobile
   const playbarMobileImg = document.querySelector(
     "#playbarMobile .playbar-song-img"
   );
 
-  // Aggiorna la playbar desktop
   if (playbarTitle) playbarTitle.innerText = title;
   if (playbarArtist) playbarArtist.innerText = artist;
   if (playbarDesktopImg) playbarDesktopImg.src = imgSrc; // Aggiorna l'immagine desktop
 
-  // Aggiorna la playbar mobile
   if (playbarMobileImg) playbarMobileImg.src = imgSrc;
 
-  // Troncamento del titolo (solo per la versione desktop)
   if (playbarTitle) {
     playbarTitle.style.whiteSpace = "nowrap";
     playbarTitle.style.overflow = "hidden";
@@ -268,18 +258,18 @@ const addToFavorite = () => {
 };
 
 addToFavorite();
-//Aggiorna dinamicamente barra volume//
+
 const volumeControl = document.querySelector("#playbarMobile .volumeControl");
 
 volumeControl.addEventListener("input", function () {
   const volume = this.value; // Ottiene il valore corrente del volume
   this.style.setProperty("--volume-level", `${volume}%`);
 });
-//Aggiorna dinamicamente barra volume//
+
 const volumeControl1 = document.querySelector("#playbarDesktop .volumeControl");
 
 volumeControl1.addEventListener("input", function () {
-  const volume = this.value; // Ottiene il valore corrente del volume
+  const volume = this.value;
   this.style.setProperty("--volume-level", `${volume}%`);
 });
 // Enlarge - Reduce

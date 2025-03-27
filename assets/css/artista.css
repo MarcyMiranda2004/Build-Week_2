@@ -1,16 +1,9 @@
-.userImg {
-  width: 30px;
+* {
+  color: white !important;
 }
+
 ol {
   list-style-type: decimal;
-}
-.image-container {
-  position: relative;
-  width: 60px;
-  height: 60px;
-  display: inline-block;
-  overflow: hidden;
-  border-radius: 8px; /* Mantiene un aspetto arrotondato se necessario */
 }
 
 .track-img {
@@ -40,7 +33,7 @@ ol {
 
 .image-container:hover .track-img {
   filter: blur(4px);
-  transform: scale(1.1); /* Leggera crescita per un effetto smooth */
+  transform: scale(1.1);
 }
 
 .image-container:hover .play-button {
@@ -54,18 +47,46 @@ ol {
   text-overflow: ellipsis;
   max-width: 150px;
 }
+
 .actualSong {
   width: min-content;
 }
+
 #asideSX {
   scrollbar-width: none;
 }
+
 main {
   scrollbar-width: none;
+  overflow: auto;
 }
+
+main::-webkit-scrollbar {
+  width: 10px;
+}
+
+main::-webkit-scrollbar-track {
+  background: black;
+}
+
+main::-webkit-scrollbar-thumb {
+  background: rgb(53, 53, 53);
+  border-radius: 10px;
+}
+
+main::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
+
 #visualizzaAltro {
   scrollbar-width: none;
 }
+
 a {
   text-decoration: none;
+}
+
+.followButton:hover {
+  background-color: white;
+  color: black !important;
 }

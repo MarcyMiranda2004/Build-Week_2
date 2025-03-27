@@ -34,27 +34,6 @@ main::-webkit-scrollbar-thumb:hover {
   background: #444;
 }
 
-aside {
-  overflow: auto;
-}
-
-aside::-webkit-scrollbar {
-  width: 10px;
-}
-
-aside::-webkit-scrollbar-track {
-  background: black;
-}
-
-aside::-webkit-scrollbar-thumb {
-  background: rgb(53, 53, 53);
-  border-radius: 10px;
-}
-
-aside::-webkit-scrollbar-thumb:hover {
-  background: #444;
-}
-
 i {
   cursor: pointer;
 }
