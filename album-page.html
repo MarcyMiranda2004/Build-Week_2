@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Spotify - album-page</title>
+
     <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -11,17 +12,23 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+
     <!-- Bootstrap Icon -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
+
     <!-- Custom Bootstrap -->
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <!-- CSS Home Page serve per le immagini -->
+
+    <!-- CSS Home Page -->
     <link rel="stylesheet" href="./assets/css/home-page.css" />
+
     <!-- CSS Album page -->
     <link rel="stylesheet" href="./assets/css/album.css" />
+
+    <!-- CSS Playbar -->
     <link rel="stylesheet" href="./assets/css/playbar.css" />
     <link rel="stylesheet" href="./assets/css/playbar_mobile.css" />
   </head>
@@ -29,7 +36,7 @@
   <body class="bg-secondary overflow-hidden">
     <div class="row h-100">
       <!-- Side Bar SX -->
-      <aside class="col col-md-2 bg-black ps-4 d-none d-md-block">
+      <aside class="col d-none d-md-none d-lg-block bg-black ps-4">
         <div class="d-flex flex-column border-bottom border-1 border-danger">
           <i class="bi bi-three-dots text-success fs-3 my-1"></i>
           <ul class="list-unstyled fw-bold">
@@ -37,34 +44,44 @@
               <a
                 href="./home-page.html"
                 class="text-decoration-none text-success"
-                ><i class="bi bi-house-door-fill mx-1 fs-4"></i> Home</a
+                ><i class="bi bi-house-door-fill mx-1 text-success fs-4"></i>
+                Home</a
               >
             </li>
+
             <li class="py-2 text-success hover">
-              <i class="bi bi-search mx-1 text-success fs-4"></i> Cerca
+              <a
+                href="./search-page.html"
+                class="text-decoration-none text-success"
+                ><i class="bi bi-search mx-1 text-success fs-4"></i> Cerca</a
+              >
             </li>
+
             <li class="py-2 text-success hover">
-              <i class="bi bi-collection mx-1 text-success fs-4"></i> La Tua
-              Libreria
+              <a href="#" class="text-decoration-none text-success"
+                ><i class="bi bi-collection mx-1 text-success fs-4"></i> La Tua
+                Libreria</a
+              >
             </li>
           </ul>
 
           <ul class="list-unstyled fw-bold">
             <li class="py-2 text-success hover d-flex align-items-center">
-              <div class="crea rounded-1 me-2">
+              <div class="crea rounded-1 me-2 playlistCardImg">
                 <i class="bi bi-plus-lg mx-1 text-success fs-4 text-black"></i>
               </div>
               Crea Playlist
             </li>
 
             <li class="py-2 text-success hover d-flex align-items-center">
-              <div class="favorite p-1 rounded-1 me-2">
+              <div class="favorite p-1 rounded-1 me-2 playlistCardImg">
                 <i class="bi bi-heart-fill mx-1 text-success fs-6"></i>
               </div>
               Favorite
             </li>
+
             <li class="py-2 text-success hover d-flex align-items-center">
-              <div class="iTuoiEpisodi p-1 rounded-1 me-2">
+              <div class="iTuoiEpisodi p-1 rounded-1 me-2 playlistCardImg">
                 <i class="bi bi-bookmark-fill mx-1 text-success fs-6"></i>
               </div>
               I Tuoi Episodi
@@ -72,55 +89,55 @@
           </ul>
         </div>
         <!-- Fake playlist -->
-        <div class="my-4 fw-light">
-          <p class="fs-7 m-2 text-success">Guitar solos that summon demons</p>
-          <p class="fs-7 m-2 text-success">
+        <div class="my-4 playlist fw-light">
+          <p class="fs-6 m-2 text-success">Guitar solos that summon demons</p>
+          <p class="fs-6 m-2 text-success">
             Vocaloid but only the unskippable bangers
           </p>
-          <p class="fs-7 m-2 text-success">Just one more side quest...</p>
-          <p class="fs-7 m-2 text-success">
+          <p class="fs-6 m-2 text-success">Just one more side quest...</p>
+          <p class="fs-6 m-2 text-success">
             Anime OPs that make me feel like the MC
           </p>
-          <p class="fs-7 m-2 text-success">Miku miku oo ee oo</p>
-          <p class="fs-7 m-2 text-success">
+          <p class="fs-6 m-2 text-success">Miku miku oo ee oo</p>
+          <p class="fs-6 m-2 text-success">
             Bro this sounds like a final boss theme
           </p>
-          <p class="fs-7 m-2 text-success">
+          <p class="fs-6 m-2 text-success">
             Screaming into the abyss but make it music
           </p>
-          <p class="fs-7 m-2 text-success">
+          <p class="fs-6 m-2 text-success">
             I took an arrow in the knee aah soundtrack
           </p>
-          <p class="fs-7 m-2 text-success">
+          <p class="fs-6 m-2 text-success">
             OSTs that go harder than they should
           </p>
-          <p class="fs-7 m-2 text-success">
+          <p class="fs-6 m-2 text-success">
             Miku songs that changed my life fr
           </p>
-          <p class="fs-7 m-2 text-success">
+          <p class="fs-6 m-2 text-success">
             Crying in 2008 while listening to world is mine
           </p>
-          <p class="fs-7 m-2 text-success">
+          <p class="fs-6 m-2 text-success">
             Metal songs that make me feel like a villain
           </p>
-          <p class="fs-7 m-2 text-success">
+          <p class="fs-6 m-2 text-success">
             Chill game bgm but it hits different
           </p>
-          <p class="fs-7 m-2 text-success">
+          <p class="fs-6 m-2 text-success">
             Songs that make me wanna run with toast in my mouth
           </p>
-          <p class="fs-7 m-2 text-success">
+          <p class="fs-6 m-2 text-success">
             Anime music but only the most emotional ones
           </p>
-          <p class="fs-7 m-2 text-success">
+          <p class="fs-6 m-2 text-success">
             Gaming music that makes me feel unstoppable
           </p>
-          <p class="fs-7 m-2 text-success">Minecraft and chill</p>
-          <p class="fs-7 m-2 text-success">Mosh pit anthems for your soul</p>
-          <p class="fs-7 m-2 text-success">
+          <p class="fs-6 m-2 text-success">Minecraft and chill</p>
+          <p class="fs-6 m-2 text-success">Mosh pit anthems for your soul</p>
+          <p class="fs-6 m-2 text-success">
             Every anime OP is a banger, prove me wrong
           </p>
-          <p class="fs-7 m-2 text-success">
+          <p class="fs-6 m-2 text-success">
             Metal that makes me wanna punch a dragon
           </p>
         </div>
@@ -158,17 +175,17 @@
               </div>
             </div>
           </div>
-          <div class="d-flex justify-content-between">
+          <div class="d-flex justify-content-between pt-2">
             <!-- navbar -->
-            <div class="d-flex justify-content-center my-4">
-              <a href="./home-page.html"><i class="bi bi-chevron-left"></i> </a>
-
-              <i class="bi bi-chevron-right hide"></i>
+            <div>
+              <i class="fas fa-chevron-left previousSong fs-5"></i>
+              <i class="fas fa-chevron-right nextSong fs-5"></i>
             </div>
+
             <!-- User Dropdown Menu -->
-            <div class="dropdown mt-4">
+            <div class="dropdown">
               <button
-                class="btn text-white dropdown-toggle hide"
+                class="btn btn-secondary dropdown-toggle bg-black rounded-pill p-1 pe-3"
                 type="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -180,15 +197,19 @@
                 />
                 Marcello Miranda ...
               </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Account</a></li>
-                <li><a class="dropdown-item" href="#">Settings</a></li>
-                <li><a class="dropdown-item" href="#">Logout</a></li>
+              <ul class="dropdown-menu bg-secondary border border-1">
+                <li>
+                  <a class="dropdown-item text-white" href="#">Account</a>
+                </li>
+                <li>
+                  <a class="dropdown-item text-white" href="#">Settings</a>
+                </li>
+                <li><a class="dropdown-item text-white" href="#">Logout</a></li>
               </ul>
             </div>
           </div>
 
-          <!-- immagine piu almbum -->
+          <!-- immagine piu album -->
           <div id="album-container" class="d-flex gap-4 mx-4">
             <img src="./assets/img/main/image-1.jpg" id="img-album" />
             <div>
@@ -241,80 +262,72 @@
           ></div>
         </div>
       </main>
-      <!-- asied DX -->
-      <aside class="col col-md-2 bg-black ps-4 d-none d-md-block">
-        <div class="d-flex justify-content-between">
-          <h5>Attività Amici</h5>
-          <div><i class="bi bi-person-add"></i> <i class="bi bi-x-lg"></i></div>
+
+      <!-- Side Bar DX -->
+      <aside
+        class="col d-none d-md-none d-lg-block d-flex flex-column bg-black"
+      >
+        <div class="d-flex justify-content-between align-items-center p-1">
+          <h5 class="fw-bold m-2 fs-6">Attività Amici</h5>
+          <div>
+            <i class="bi bi-person-add p-1"></i> <i class="bi bi-x-lg p-1"></i>
+          </div>
         </div>
-        <div class="d-flex flex-column m-2">
-          <!-- User 1 -->
-          <section class="d-flex align-items-top justify-content-between my-2">
+        <div class="d-flex flex-column m-1">
+          <!-- Amico 1 -->
+          <section class="d-flex position-relative mb-3">
             <img
-              src="/assets/img/users/user-2.jpg"
+              src="./assets/img/users/user-2.jpg"
               alt="user_img"
-              class="rounded-circle userImg me-2"
-              style="width: 30px; height: 30px"
+              class="rounded rounded-circle userImg"
             />
-            <div class="flex-grow-1">
-              <h5 class="fs-6 fw-bold mb-0 text-success">Angelo Zorzi</h5>
-              <p class="fs-8 mb-0 text-success fw-light">
-                In Camera &bull; Yumi Zouma
+            <div class="flex-column ms-1">
+              <h5 class="fs-6 fw-bold text-success">Angelo Zorzi</h5>
+              <p class="fs-8 text-success">In Camera &bull; Yumi Zouma</p>
+              <p class="fs-9 text-success">
+                <i class="bi bi-stop-circle"></i> EP III
               </p>
-              <p class="fs-8 mb-0 text-success">
-                <i class="bi bi-stop-circle text-success"></i> EP III
-              </p>
+              <p class="fs-8 userTime text-success">4 ore</p>
             </div>
-            <p class="fs-8 mb-0 text-success">4 ore</p>
           </section>
 
-          <!-- User 2 -->
-          <section class="d-flex align-items-top justify-content-between my-2">
+          <!-- Amico 2 -->
+          <section class="d-flex position-relative mb-3">
             <img
-              src="/assets/img/users/user-3.jpg"
+              src="./assets/img/users/user-3.jpg"
               alt="user_img"
-              class="rounded rounded-circle userImg me-2"
-              style="width: 30px; height: 30px"
+              class="rounded rounded-circle userImg"
             />
-            <div class="flex-grow-1">
-              <h5 class="fs-6 fw-bold mb-0 text-success">
-                Lucrezia Martinelli
-              </h5>
-              <p class="fs-8 mb-0 text-success fw-light">
-                Aimed to Kill &bull; Jade Lemac
+            <div class="flex-column ms-2">
+              <h5 class="fs-6 fw-bold text-success">Lucrezia Martinelli</h5>
+              <p class="fs-8 text-success">Aimed to Kill &bull; Jade Lemac</p>
+              <p class="fs-9 text-success">
+                <i class="bi bi-stop-circle"></i> Aimed to Kill
               </p>
-              <p class="fs-8 mb-0 text-success">
-                <i class="bi bi-stop-circle text-success"></i> Aimed to Kill
-              </p>
+              <p class="fs-8 userTime text-success">8 ore</p>
             </div>
-            <p class="fs-8 mb-0 text-success">8 ore</p>
           </section>
 
-          <!-- User 3 -->
-          <section class="d-flex align-items-top justify-content-between my-2">
+          <!-- Amico 3 -->
+          <section class="d-flex position-relative mb-3">
             <img
-              src="/assets/img/users/user-4.jpg"
+              src="./assets/img/users/user-4.jpg"
               alt="user_img"
-              class="rounded rounded-circle userImg me-2"
-              style="width: 30px; height: 30px"
+              class="rounded rounded-circle userImg"
             />
-            <div class="flex-grow-1">
-              <h5 class="fs-6 fw-bold mb-0 text-success">
-                Marco Teodoro Mancuso
-              </h5>
-              <p class="fs-8 mb-0 text-success fw-light">
-                New Kings &bull; Sleeping Wolf
+            <div class="flex-column ms-2">
+              <h5 class="fs-6 fw-bold text-success">Marco Teodoro Mancuso</h5>
+              <p class="fs-8 text-success">New Kings &bull; Sleeping Wolf</p>
+              <p class="fs-9 text-success">
+                <i class="bi bi-stop-circle text-success"></i> Twint Badass Mood
               </p>
-              <p class="fs-8 mb-0 text-success">
-                <i class="bi bi-music-note-beamed text-success"></i> Twint
-                Badass Mood
-              </p>
+              <p class="fs-8 userTime text-success">3 giorni</p>
             </div>
-            <p class="fs-8 mb-0 text-success">3 giorni</p>
           </section>
         </div>
       </aside>
-      <!-- playbar Desktop-->
+
+      <!-- Playbar -->
       <div
         id="playbarDesktop"
         class="fixed-bottom d-none d-md-flex justify-content-evenly bg-secondary p-2 px-4 align-items-center border-top border-danger playbar"
@@ -376,10 +389,11 @@
 
           <!-- Progression Bar -->
           <div
-            class="text-white d-flex justify-content-evenly align-items-center w-100 mx-3"
+            class="text-white d-flex justify-content-center align-items-center w-75 mx-3"
           >
-            <p class="mb-0 fs-7" id="timePast">00:00</p>
-            <div class="w-100">
+            <p class="mb-0 fs-7 me-3" id="timePast">00:00</p>
+
+            <div class="w-75">
               <div
                 class="progress bg-danger progressionBar"
                 role="progressbar"
@@ -391,7 +405,8 @@
                 <div class="progress-bar" style="width: 25%"></div>
               </div>
             </div>
-            <p class="mb-0 fs-7" id="timeRemaining">03:00</p>
+
+            <p class="mb-0 fs-7 ms-3" id="timeRemaining">03:00</p>
           </div>
         </div>
 
@@ -415,6 +430,7 @@
           </button>
         </div>
       </div>
+
       <!-- playbar Mobile -->
       <div
         id="playbarMobile"
@@ -510,12 +526,17 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+
     <!-- Fontwesome JS -->
     <script
       src="https://kit.fontawesome.com/cede422883.js"
       crossorigin="anonymous"
     ></script>
+
     <!-- Home Page JS -->
     <script src="./assets/js/album.js"></script>
+
+    <!-- Playbar JS -->
+    <script src="./assets/js/playbar.js"></script>
   </body>
 </html>
