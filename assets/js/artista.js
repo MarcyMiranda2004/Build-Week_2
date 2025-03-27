@@ -47,7 +47,7 @@ const getPopularTracks = function (artistID) {
     )
     .then((data) => {
       const popularTracksList = document.getElementById("popular-tracks-list");
-      popularTracksList.innerHTML = ""; // Pulisce prima di riempire
+      popularTracksList.innerHTML = "";
 
       data.data.forEach((track) => {
         const listItem = document.createElement("li");
@@ -97,7 +97,7 @@ const getExtraTracks = function (artistID) {
     )
     .then((data) => {
       const extraTracksList = document.getElementById("extra-tracks-list");
-      extraTracksList.innerHTML = ""; // Pulisce la lista
+      extraTracksList.innerHTML = "";
       data.data.slice(5).forEach((track) => {
         const listItem = document.createElement("li");
         listItem.classList.add("mb-3");
@@ -135,7 +135,6 @@ const formatDuration = (duration) => {
   return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
 };
 
-// Visualizza/Nasconde extra tracks
 let extraVisible = false;
 let extraTracksLoaded = false;
 const toggleExtraTracks = (artistID) => {
@@ -163,11 +162,10 @@ const toggleExtraTracks = (artistID) => {
     extraVisible = false;
   }
 };
-// Prendo l'artistID dai parametri dell'URL
+
 const params = new URLSearchParams(window.location.search);
 const artistID = params.get("id");
 
-// Se non c'è l'id nell'URL, avviso l'utente
 if (!artistID) {
   alert("Nessun artista selezionato");
 } else {
@@ -180,7 +178,6 @@ if (!artistID) {
       toggleExtraTracks(artistID);
     });
 }
-// Event delegation sui due contenitori delle tracce
 
 document
   .getElementById("popular-tracks-list")
@@ -190,13 +187,11 @@ document
   .addEventListener("click", handleTrackClick);
 
 function handleTrackClick(e) {
-  // Controllo se clicchi su immagine, titolo o sul bottone play
   if (
     e.target.classList.contains("track-img") ||
     e.target.classList.contains("track-title") ||
     e.target.classList.contains("bi-play-fill")
   ) {
-    // Risalgo al li
     const trackElement = e.target.closest("li");
     if (trackElement) {
       const trackTitle = trackElement.querySelector(".track-title").innerText;
@@ -237,7 +232,7 @@ const fillPlaybar = (title, artist, imgSrc) => {
   }
 };
 
-// Gestione della progress bar dinamica (bonus)
+//Progress Bar//
 let progress = 0;
 const progressBar = document.querySelector(".progress-bar");
 
@@ -256,7 +251,6 @@ playButton.addEventListener("click", () => {
   simulateProgress();
 });
 
-// Aggiungere il Brano ai Preferiti
 const addToFavorite = () => {
   const likeSong = document.getElementById("likeSong");
 
