@@ -63,6 +63,7 @@ volumeControl.addEventListener("input", function () {
   const volume = this.value;
   this.style.setProperty("--volume-level", `${volume}%`);
 });
+
 // Enlarge - Reduce
 const enlargeReduce = () => {
   const enlargeReduce = document.getElementById("enlargeReduce");

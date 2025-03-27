@@ -66,20 +66,17 @@ document.addEventListener("DOMContentLoaded", () => {
       .then((data) => {
         console.log("Data ricevuta:", data);
 
-        // Controlla se i dati sono validi
         if (
           data &&
           data.cover_big &&
           data.title &&
           data.contributors.length > 0
         ) {
-          // Aggiorna la parte mobile
           closeAppSongImg.src = data.cover_big;
           closeAppSongTitle.innerText = data.title;
           closeAppSongArtist.innerText = data.artist.name;
           closeAppSongNew.innerText = `Ascolta ora il nuovo brano di ${data.artist.name}`;
 
-          // Aggiorna la parte desktop (se esiste)
           if (playbarDesktopSongImg) {
             playbarDesktopSongImg.src = data.cover_big;
           }
