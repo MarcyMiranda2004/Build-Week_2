@@ -19,8 +19,8 @@
     <!-- Custom Bootstrap -->
     <link rel="stylesheet" href="../css/style.css" />
     <!-- CSS Artist Page -->
-    <link rel="stylesheet" href="../css/artista.css" />
     <link rel="stylesheet" href="../css/playbar.css" />
+    <link rel="stylesheet" href="../css/artista.css" />
   </head>
 
   <body
@@ -36,7 +36,10 @@
     <div class="container-fluid d-flex flex-column min-vh-100">
       <div class="row flex-grow-1">
         <!-- Side Bar SX -->
-        <aside class="col col-md-2 bg-black ps-4 d-none d-md-block">
+        <aside
+          class="col col-md-2 bg-black ps-4 d-none d-md-block vh-100 overflow-y-scroll"
+          id="asideSX"
+        >
           <div class="d-flex flex-column border-bottom border-1 border-danger">
             <i class="bi bi-three-dots text-success fs-3 my-1 hover"></i>
             <ul class="list-unstyled fw-bold">
@@ -122,7 +125,7 @@
           </div>
         </aside>
 
-        <main class="col-12 col-md-8 p-0 text-light">
+        <main class="col-12 col-md-8 p-0 text-light overflow-y-scroll vh-100">
           <!-- Main -->
           <div class="container-fluid m-0" id="artist-bg">
             <!-- Header con controlli -->
@@ -237,7 +240,10 @@
             </div>
 
             <!-- Pulsante Visualizza Altro -->
-            <div class="container-fluid text-start ms-1 text-md-start">
+            <div
+              class="container-fluid text-start ms-1 text-md-start vh-100 overflow-y-scroll"
+              id="visualizzaAltro"
+            >
               <div class="row p-0">
                 <div class="col-12 my-3">
                   <button
@@ -268,7 +274,7 @@
 
         <!-- Side Bar DX -->
         <aside
-          class="col col-md-2 d-flex flex-column bg-black d-none d-md-block"
+          class="col col-md-2 d-flex flex-column bg-black d-none d-md-block vh-100"
           style="text-overflow: ellipsis"
         >
           <div class="d-flex justify-content-between p-1">
@@ -355,7 +361,7 @@
 
           <!-- Playbar -->
           <div
-            class="fixed-bottom d-flex justify-content-between bg-secondary p-2 px-4 align-items-center border-top border-danger"
+            class="fixed-bottom d-flex justify-content-evenly bg-secondary p-2 px-4 align-items-center border-top border-danger"
           >
             <!-- Brano in Corso -->
             <div class="d-flex align-items-center text-white">
@@ -378,7 +384,7 @@
 
             <!-- Play Buttons -->
             <div class="d-flex flex-column align-items-center flex-grow-1">
-              <div class="d-flex justify-content-center mb-2">
+              <div class="d-flex justify-content-evenly mb-2">
                 <button
                   class="text-white fs-4 playbarButton"
                   id="shuffleButton"
@@ -394,7 +400,7 @@
                 </button>
 
                 <button
-                  class="playbarButton text-decoration-none fs-3 bg-white"
+                  class="playbarButton text-decoration-none fs-3 bg-white ps-2"
                   id="playButton"
                 >
                   <i class="bi bi-play-fill text-black"></i>
@@ -414,9 +420,9 @@
 
               <!-- Progression Bar -->
               <div
-                class="text-white d-flex justify-content-center align-items-center w-50 px-5"
+                class="text-white d-flex justify-content-evenly align-items-center w-50"
               >
-                <p class="mb-0 fs-8 mx-3" id="timePast">00:30</p>
+                <p class="mb-0 fs-8 mx-3" id="timePast">00:00</p>
                 <div class="w-100">
                   <div
                     class="progress bg-danger progressionBar"

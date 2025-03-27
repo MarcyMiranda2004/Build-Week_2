@@ -54,3 +54,15 @@ ol {
   text-overflow: ellipsis;
   max-width: 150px;
 }
+.actualSong {
+  width: min-content;
+}
+#asideSX {
+  scrollbar-width: none;
+}
+main {
+  scrollbar-width: none;
+}
+#visualizzaAltro {
+  scrollbar-width: none;
+}
