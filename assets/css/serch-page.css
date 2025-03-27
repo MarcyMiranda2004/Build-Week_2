@@ -1,0 +1,13 @@
+.searchCamp {
+  width: 50%;
+  border: 1px solid rgba(128, 128, 128, 0.522) !important;
+}
+
+.searchButton {
+  border: 1px solid rgba(128, 128, 128, 0.522) !important;
+}
+
+.searchButton:hover {
+  background-color: #149643;
+  color: black;
+}
