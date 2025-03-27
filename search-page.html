@@ -133,26 +133,29 @@
     <!-- Main -->
     <main class="col col-md-12 col-lg-8 vh-100">
       <div>
-        <h1>Cerca</h1>
+        <h1 class="m-3">Cerca</h1>
         <!-- Search Bar -->
-        <nav class="navbar bg-body-tertiary">
-          <div class="container-fluid">
-            <a class="navbar-brand">Navbar</a>
-            <form class="d-flex" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
-          </div>
-        </nav>
+        <div class="mx-3">
+          <nav class="navbar bg-warning">
+            <div class="container-fluid">
+              <a class="navbar-brand text-success">Navbar</a>
+              <form class="d-flex" role="search">
+                <input
+                  class="form-control me-2 bg-warning text-success"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                  style="--bs-placeholder-color: #198754"
+                />
+                <button class="btn btn-outline-success" type="submit">
+                  Search
+                </button>
+              </form>
+            </div>
+          </nav>
+        </div>
 
-        <h2>Sfoglia Tutto</h2>
+        <h2 class="m-3">Sfoglia Tutto</h2>
 
         <div class="container">
           <div class="row">
