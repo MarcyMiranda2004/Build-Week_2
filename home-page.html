@@ -31,43 +31,50 @@
 
   <body class="vh-100 bg-secondary circular row">
     <!-- Side Bar SX -->
-    <aside class="col col-md-2 bg-black ps-4">
+    <aside class="col d-md-none d-lg-block bg-black ps-4">
       <div class="d-flex flex-column border-bottom border-1 border-danger">
         <i class="bi bi-three-dots text-success fs-3 my-1"></i>
         <ul class="list-unstyled fw-bold">
           <li class="py-2 text-success hover">
             <a href="./home-page.html" class="text-decoration-none text-success"
-              ><i class="bi bi-house-door-fill mx-1 fs-4"></i> Home</a
+              ><i class="bi bi-house-door-fill mx-1 text-success fs-4"></i>
+              Home</a
             >
           </li>
 
           <li class="py-2 text-success hover">
-            <i class="bi bi-search mx-1 text-success fs-4"></i> Cerca
+            <a
+              href="./search-page.html"
+              class="text-decoration-none text-success"
+              ><i class="bi bi-search mx-1 text-success fs-4"></i> Cerca</a
+            >
           </li>
 
           <li class="py-2 text-success hover">
-            <i class="bi bi-collection mx-1 text-success fs-4"></i> La Tua
-            Libreria
+            <a href="#" class="text-decoration-none text-success"
+              ><i class="bi bi-collection mx-1 text-success fs-4"></i> La Tua
+              Libreria</a
+            >
           </li>
         </ul>
 
         <ul class="list-unstyled fw-bold">
           <li class="py-2 text-success hover d-flex align-items-center">
-            <div class="crea rounded-1 me-2">
+            <div class="crea rounded-1 me-2 playlistCardImg">
               <i class="bi bi-plus-lg mx-1 text-success fs-4 text-black"></i>
             </div>
             Crea Playlist
           </li>
 
           <li class="py-2 text-success hover d-flex align-items-center">
-            <div class="favorite p-1 rounded-1 me-2">
+            <div class="favorite p-1 rounded-1 me-2 playlistCardImg">
               <i class="bi bi-heart-fill mx-1 text-success fs-6"></i>
             </div>
             Favorite
           </li>
 
           <li class="py-2 text-success hover d-flex align-items-center">
-            <div class="iTuoiEpisodi p-1 rounded-1 me-2">
+            <div class="iTuoiEpisodi p-1 rounded-1 me-2 playlistCardImg">
               <i class="bi bi-bookmark-fill mx-1 text-success fs-6"></i>
             </div>
             I Tuoi Episodi
@@ -128,7 +135,7 @@
     </aside>
 
     <!-- Main -->
-    <main class="col col-md-8 vh-100">
+    <main class="col col-md-12 col-lg-8 vh-100">
       <div class="d-flex justify-content-between m-3">
         <!-- Precedente e Successivo -->
         <div>
@@ -460,7 +467,7 @@
     </div>
 
     <!-- Side Bar DX -->
-    <aside class="col col-md-2 d-flex flex-column bg-black">
+    <aside class="col d-md-none d-lg-block d-flex flex-column bg-black">
       <div class="d-flex justify-content-between align-items-center p-1">
         <h5 class="fw-bold m-2 fs-6">Attività Amici</h5>
         <div>
