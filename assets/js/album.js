@@ -1,8 +1,9 @@
 // const apiLink = `https://striveschool-api.herokuapp.com/api/deezer/album/${albumID}`
 // const apiLinkTest = "https://striveschool-api.herokuapp.com/api/deezer/album/75621062"
 
-const songImport = function (albumID) {
-    
+const songImport = function () {
+    let params = new URLSearchParams(document.location.search)
+    let albumID = params.get("album-id")
 const apiLink = `https://striveschool-api.herokuapp.com/api/deezer/album/${albumID}`
     fetch(apiLink,{
         headers:{
@@ -26,6 +27,8 @@ const apiLink = `https://striveschool-api.herokuapp.com/api/deezer/album/${album
         const albumName = document.getElementById("album-name")
         singerImg.src = data.artist.picture
         imgAlbum.src = data.cover
+        imgAlbum.width = 120
+        imgAlbum.height = 120
         albumData.innerHTML =`${data.artist.name} - ${data.release_date} - ${data.nb_tracks} - ${(data.duration / 60).toFixed(2)}`
         albumName.innerHTML = `${data.title} `
         appendElement.innerHTML=` `
@@ -35,6 +38,7 @@ const apiLink = `https://striveschool-api.herokuapp.com/api/deezer/album/${album
             rowElement.classList.add("row","mt-3")
             const columnElement = document.createElement("div")
             columnElement.classList.add("col","d-flex","align-items-center","gap-2","col-7")
+            
             columnElement.id = i
             columnElement.innerHTML=`<div>${columnElement.id}</div>
                 <div>
@@ -42,10 +46,10 @@ const apiLink = `https://striveschool-api.herokuapp.com/api/deezer/album/${album
                   <span>${song.artist.name}</span>
                   `
                const columnElementB = document.createElement("div")
-               columnElementB.classList.add("col","col-3")
+               columnElementB.classList.add("col","col-3","text-center", "d-flex","justify-content-center","align-items-center","hide")
                columnElementB.innerHTML =`${song.rank}`
                const columnElementC = document.createElement("div")
-               columnElementC.classList.add("col","col-2")
+               columnElementC.classList.add("col","col-2","text-center", "d-flex","justify-content-center","align-items-center","hide")
                columnElementC.innerHTML =`${(song.duration / 60).toFixed(2)}`
                   rowElement.append(columnElement, columnElementB ,columnElementC)
                   appendElement.append(rowElement)
