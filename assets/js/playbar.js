@@ -65,12 +65,6 @@ volumeControl.addEventListener("input", function () {
   this.style.setProperty("--volume-level", `${volume}%`);
 });
 
-const volumeControl1 = document.querySelector("#playbarMobile .volumeControl");
-
-volumeControl1.addEventListener("input", function () {
-  const volume = this.value; // Ottiene il valore corrente del volume
-  this.style.setProperty("--volume-level", `${volume}%`);
-});
 // Enlarge - Reduce
 const enlargeReduce = () => {
   const enlargeReduce = document.getElementById("enlargeReduce");
